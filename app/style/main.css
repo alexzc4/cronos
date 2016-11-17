@@ -53,6 +53,14 @@ section.topYellow {
     margin-top: 130px;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+    .entryMainLogo img {
+        width: 250px;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+
 @media (max-width: 599px) {
     .entryMainLogo img {
         width: 60%;
@@ -66,6 +74,12 @@ section.topYellow {
 .entryTab {
     width: 100%;
     margin-top: 80px;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .entryTab {
+        margin-top: 70px;
+    }
 }
 
 @media (max-width: 599px) {
@@ -114,7 +128,7 @@ section.topYellow {
     text-align: center;
 }
 
-.entryWindow .entryDetail span {
+.entryWindow .entryDetail > span {
     margin-top: 15px;
     margin-bottom: 15px;
     color: white;
@@ -123,45 +137,60 @@ section.topYellow {
 }
 
 @media (max-width: 599px) {
-    .entryWindow .entryDetail span {
+    .entryWindow .entryDetail > span {
         font-size: 13px;
         margin-bottom: 5px;
     }
 }
 
-.entryWindow .entryDetail span:first-child {
+.entryWindow .entryDetail > span:first-child {
     line-height: 1.2;
     font-size: 46px;
     margin-top: 60px;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+    .entryWindow .entryDetail > span:first-child {
+        font-size: 21px;
+        margin-top: 40px;
+    }
+}
+
 @media (min-width: 960px) and (max-width: 1279px) {
-    .entryWindow .entryDetail span:first-child {
+    .entryWindow .entryDetail > span:first-child {
         font-size: 30px;
         margin-top: 40px;
     }
 }
 
 @media (max-width: 599px) {
-    .entryWindow .entryDetail span:first-child {
+    .entryWindow .entryDetail > span:first-child {
         font-size: 22px;
         margin-top: 30px;
     }
 }
 
-.entryWindow .entryDetail span:nth-child(2) {
+.entryWindow .entryDetail > span:nth-child(2) {
     line-height: 1.778;
     font-size: 18px;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+    .entryWindow .entryDetail > span:nth-child(2) {
+        margin-top: 5px;
+        line-height: 1.578;
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 599px) {
-    .entryWindow .entryDetail span:nth-child(2) {
+    .entryWindow .entryDetail > span:nth-child(2) {
         font-size: 15px;
     }
 }
 
 @media (min-width: 960px) and (max-width: 1279px) {
-    .entryWindow .entryDetail span:nth-child(2) {
+    .entryWindow .entryDetail > span:nth-child(2) {
         line-height: 1.578;
         font-size: 15px;
         margin-top: 10px;
@@ -178,6 +207,13 @@ section.topYellow {
     right: 0;
     background-color: #f8c65e;
     margin: 0 auto;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .entryWindow .entryDetail {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media (min-width: 960px) and (max-width: 1279px) {
@@ -214,6 +250,14 @@ section.topYellow {
     box-shadow: 0px 1px 0px 0px #f8c65e;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+    .entryWindow .entryLink {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+}
+
 @media (min-width: 960px) and (max-width: 1279px) {
     .entryWindow .entryLink {
         margin-bottom: 30px;
@@ -244,7 +288,18 @@ section.footerLight {
 section.footerLight span {
     color: #292929;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
+    float: left;
+}
+
+section.footerLight span:nth-child(2) {
+    text-align: right;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    section.footerLight span {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 599px) {
@@ -262,6 +317,6 @@ section.footerLight span {
 
 @media (max-width: 599px) {
     section.footerLight {
-        padding: 20px 0px;
+        padding: 20px 0px 10px;
     }
 }

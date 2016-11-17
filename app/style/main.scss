@@ -14,6 +14,7 @@ section.topYellow{
 		width: 400px;
 		height: 200px;
 		margin-top: 130px;
+		@include media(sm) { width: 250px; height: auto; margin-top: 100px; }
 		@include media(xs) { width:60%; margin-left: 10%; margin-right: 10%; height: auto; margin-top: 80px; }
 	}
 }
@@ -21,6 +22,7 @@ section.topYellow{
 .entryTab{
 	width: 100%;
 	margin-top: 80px;
+	@include media(sm) { margin-top: 70px; }
 	@include media(xs) { margin-top: 60px; }
 }
 
@@ -55,7 +57,7 @@ section.topYellow{
     	padding-left: 90px;
     	padding-right: 90px;
     	text-align: center;
-		span{
+		> span{
 			margin-top: 15px;
 			margin-bottom: 15px;
 			color:white;
@@ -72,6 +74,10 @@ section.topYellow{
 				font-size: 46px;
 				margin-top: 60px;
 				
+				@include media(sm){
+					font-size: 21px;
+					margin-top: 40px;
+				}
 
 				@include media(md) {
 					font-size: 30px;
@@ -87,6 +93,13 @@ section.topYellow{
 			&:nth-child(2){
 				line-height: 1.778;
 				font-size: 18px;
+
+				@include media(sm) {
+    				margin-top: 5px;	
+				    line-height: 1.578;
+    				font-size: 13px;
+				}
+
 				@include media(xs) { 
 					font-size: 15px;
 				}
@@ -111,7 +124,12 @@ section.topYellow{
 			    margin: 0 auto;
 		}
 
-		@include media(md){
+		@include media(sm){
+			padding-left: 15px;
+    		padding-right: 15px; 
+		}
+
+		@include media(md) {
 			padding-left: 35px;
     		padding-right: 35px;
 		}
@@ -137,6 +155,7 @@ section.topYellow{
 		&:hover{
 			box-shadow: 0px 1px 0px 0px $orange-color;
 		}
+		@include media(sm) { margin-top: 15px; margin-bottom: 30px; font-size: 15px; }
 		@include media(md) { margin-bottom: 30px; }
 		@include media(xs) { margin-bottom: 25px; }
 	}
@@ -151,8 +170,15 @@ section.footerLight{
 		span{
 			color: $black-color;
   			font-weight: bold;
-  			font-size: 18px;
-			
+  			font-size: 17px;
+			float:left;
+
+			&:nth-child(2){
+				text-align: right;
+			}
+
+			@include media(sm) { font-size: 13px; }
+
   			@include media(xs) { 
   				margin-bottom: 10px; 
   				font-size: 11px; 
@@ -164,5 +190,5 @@ section.footerLight{
   				
   			}
 		}
-	@include media(xs) { padding: 20px 0px; }
+	@include media(xs) { padding: 20px 0px 10px; }
 }

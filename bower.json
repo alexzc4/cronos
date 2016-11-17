@@ -1,0 +1,11 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-material": "^1.1.1",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.1",
+    "bootstrap": "3.3.2",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}

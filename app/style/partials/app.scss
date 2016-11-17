@@ -1,0 +1,66 @@
+//------------MEDIA MIXIN------------
+
+@mixin media($media) {
+  @if $media == xs {
+    @media (max-width: 599px) { @content; }
+  }
+  @else if $media == gt-xs {
+    @media (min-width: 600px) { @content; }
+  }  
+  @else if $media == sm {
+    @media (min-width: 600px) and (max-width: 959px) { @content; }
+  }
+  @else if $media == md {
+    @media (min-width: 960px) and (max-width: 1279px) { @content; }
+  }
+  @else if $media == gt-md {
+    @media (min-width: 1280px) { @content; }
+  }
+}
+
+//-----------------------------------
+
+
+
+//-------------VARIABLES-------------
+
+$orange-color : #f8c65e;
+$black-color : #292929;
+$main-font: 'Open Sans', sans-serif;
+
+//-----------------------------------
+
+
+//------------DEFAULT CLASS----------
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//-----------------------------------
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+	font-family: $main-font;
+}
+
+.container{
+	width: 100%;
+	@include media(gt-md) { width: 1279px; }
+}
+
+#bodyContainer {
+    height: auto;
+    min-height: calc(100% - 130px);
+    box-sizing: border-box;
+    margin-bottom: 65px;
+    position: relative;
+}

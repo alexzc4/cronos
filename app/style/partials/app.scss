@@ -26,6 +26,7 @@
 
 $orange-color : #f8c65e;
 $black-color : #292929;
+$link-footer-color: rgb(52, 53, 52);
 $main-font: 'Open Sans', sans-serif;
 
 //-----------------------------------
@@ -54,13 +55,108 @@ body{
 
 .container{
 	width: 100%;
-	@include media(gt-md) { width: 1279px; }
+    max-width: 1279px;
 }
 
 #bodyContainer {
     height: auto;
-    min-height: calc(100% - 130px);
+    min-height: calc(100% - 131px);
     box-sizing: border-box;
     margin-bottom: 65px;
     position: relative;
+}
+
+#footer {
+
+	.footerUp{
+    	padding: 40px 10px;
+    	border-top: 1px solid black;
+		.footerLogo{
+			a{
+				img{
+					width: 175px;
+				}
+			}
+			@include media(sm){ display: none; }
+			@include media(xs){ margin-bottom: 20px; text-align: center; }
+		}
+		ul{
+			
+			li{
+				list-style-type: none;
+				float: left;
+				font-size: 16px;
+				text-align: center;
+				a{
+					text-decoration: none;
+					color: $link-footer-color;
+					font-weight: bold;
+					padding-bottom: 5px;
+					&:hover{
+						box-shadow: 0px 1px 0px 0px $orange-color;
+					}
+
+					@include media(xs){ padding-bottom: 3px; letter-spacing: .2px;}
+				}
+
+				@include media(md){ font-size: 15px; }
+				@include media(sm){ font-size: 14px; }
+				@include media(xs){ font-size: 13px; margin-bottom: 13px; text-transform: uppercase; }
+			}
+		}
+
+		@include media(md){ padding: 30px 10px; }
+		@include media(sm){ padding: 30px 10px; }
+		@include media(xs){ padding: 25px 0 10px; }
+	}
+
+	.footerDown{
+		background-color: $black-color;
+		color: white;
+		font-size: 18px;
+		padding: 22px 10px;
+    	border-top: 1px solid $black-color;
+
+		@include media(md){ font-size: 15px; }
+		@include media(sm){ font-size: 14px; }
+    	@include media(xs) { font-size:13px; padding: 18px 0; }
+	}
+}
+
+
+#header{
+	position: absolute;
+	top:30px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	.headerMenu{
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				list-style-type: none;
+				float: left;
+				font-size: 15px;
+				transition: all .2s linear;
+				&:hover{
+					transform: translate3d(0px,19px,0px);
+					
+				}
+				a{
+					text-decoration: none;
+					color: $link-footer-color;
+					font-weight: bold;
+					padding: 22px 15px;
+					transition: all .2s linear;
+					&:hover{
+						background-color: $orange-color;
+					}
+				}
+			}
+		}
+	}
+	.container{
+		height:100px;
+	}
 }

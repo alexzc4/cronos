@@ -1,5 +1,7 @@
 @import "partials/app";
 
+/* -------------ENTRY PAGE------------- */ 
+
 section.topYellow{
 	border-top: 30px solid $orange-color;
 	position: absolute;
@@ -22,145 +24,146 @@ section.topYellow{
 .entryTab{
 	width: 100%;
 	margin-top: 80px;
+
 	@include media(sm) { margin-top: 70px; }
 	@include media(xs) { margin-top: 60px; }
-}
 
-.entryWindow{
-	position: relative;
-	float: left;
-
-	.entryLogo{
-    	display: block;
+	.entryWindow{
 		position: relative;
 		float: left;
-		width: 100%;
-		border: 1px solid $black-color;
-		box-sizing: border-box;
-		&:before{
-			content:'';
-			display: block;
-			padding-top: 80%;
-			box-sizing: border-box;
-		}
-		img{
-			height: 100%;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-	}
 
-	.entryDetail{
-		background-color: $black-color;
-		position: relative;
-    	padding-left: 90px;
-    	padding-right: 90px;
-    	text-align: center;
-		> span{
-			margin-top: 15px;
-			margin-bottom: 15px;
-			color:white;
+		.entryLogo{
+	    	display: block;
+			position: relative;
 			float: left;
 			width: 100%;
-
-			@include media(xs) {
-				font-size: 13px;
-				margin-bottom: 5px;
+			border: 1px solid $black-color;
+			box-sizing: border-box;
+			&:before{
+				content:'';
+				display: block;
+				padding-top: 80%;
+				box-sizing: border-box;
 			}
-
-			&:first-child{
-				line-height: 1.2;
-				font-size: 46px;
-				margin-top: 60px;
-				
-				@include media(sm){
-					font-size: 21px;
-					margin-top: 40px;
-				}
-
-				@include media(md) {
-					font-size: 30px;
-    				margin-top: 40px;
-				}
-
-				@include media(xs) {     
-					font-size: 22px;
-    				margin-top: 30px; 
-				}
-			}
-
-			&:nth-child(2){
-				line-height: 1.778;
-				font-size: 18px;
-
-				@include media(sm) {
-    				margin-top: 5px;	
-				    line-height: 1.578;
-    				font-size: 13px;
-				}
-
-				@include media(xs) { 
-					font-size: 15px;
-				}
-
-				@include media(md) {
-					line-height: 1.578;
-					font-size: 15px;
-					margin-top: 10px;
-				}
+			img{
+				height: 100%;
+				position: absolute;
+				top: 0;
+				width: 100%;
 			}
 		}
 
-		&:before{
-			content: '';
-			position: absolute;
-			height: 10px;
-			width: 25%;
-			top:-1px;
-			left: 0;
-			right: 0;
-			background-color: $orange-color;
-			    margin: 0 auto;
+		.entryDetail{
+			background-color: $black-color;
+			position: relative;
+	    	padding-left: 90px;
+	    	padding-right: 90px;
+	    	text-align: center;
+			> span{
+				margin-top: 15px;
+				margin-bottom: 15px;
+				color:white;
+				float: left;
+				width: 100%;
+
+				@include media(xs) {
+					font-size: 13px;
+					margin-bottom: 5px;
+				}
+
+				&:first-child{
+					line-height: 1.2;
+					font-size: 46px;
+					margin-top: 60px;
+					
+					@include media(sm){
+						font-size: 21px;
+						margin-top: 40px;
+					}
+
+					@include media(md) {
+						font-size: 30px;
+	    				margin-top: 40px;
+					}
+
+					@include media(xs) {     
+						font-size: 22px;
+	    				margin-top: 30px; 
+					}
+				}
+
+				&:nth-child(2){
+					line-height: 1.778;
+					font-size: 18px;
+
+					@include media(sm) {
+	    				margin-top: 5px;	
+					    line-height: 1.578;
+	    				font-size: 13px;
+					}
+
+					@include media(xs) { 
+						font-size: 15px;
+					}
+
+					@include media(md) {
+						line-height: 1.578;
+						font-size: 15px;
+						margin-top: 10px;
+					}
+				}
+			}
+
+			&:before{
+				content: '';
+				position: absolute;
+				height: 10px;
+				width: 25%;
+				top:-1px;
+				left: 0;
+				right: 0;
+				background-color: $orange-color;
+				    margin: 0 auto;
+			}
+
+			@include media(sm){
+				padding-left: 15px;
+	    		padding-right: 15px; 
+			}
+
+			@include media(md) {
+				padding-left: 35px;
+	    		padding-right: 35px;
+			}
+
+			@include media(xs) { 
+				padding-left: 15px;
+	    		padding-right: 15px; 
+	    	}
 		}
 
-		@include media(sm){
-			padding-left: 15px;
-    		padding-right: 15px; 
+		.entryLink{
+			margin-top: 15px;
+			margin-bottom: 40px;
+			color: $orange-color;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 20px;
+	    	letter-spacing: .5px;
+			text-decoration: none;
+			margin-bottom: 40px;
+			display: inline-block;
+			padding-bottom: 5px;
+			&:hover{
+				box-shadow: 0px 1px 0px 0px $orange-color;
+			}
+			@include media(sm) { margin-top: 15px; margin-bottom: 30px; font-size: 15px; }
+			@include media(md) { margin-bottom: 30px; }
+			@include media(xs) { margin-bottom: 25px; }
 		}
 
-		@include media(md) {
-			padding-left: 35px;
-    		padding-right: 35px;
-		}
-
-		@include media(xs) { 
-			padding-left: 15px;
-    		padding-right: 15px; 
-    	}
+		@include media(xs) { width: 90%; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); margin-bottom:40px;}
 	}
-
-	.entryLink{
-		margin-top: 15px;
-		margin-bottom: 40px;
-		color: $orange-color;
-		font-weight: bold;
-		text-transform: uppercase;
-		font-size: 20px;
-    	letter-spacing: .5px;
-		text-decoration: none;
-		margin-bottom: 40px;
-		display: inline-block;
-		padding-bottom: 5px;
-		&:hover{
-			box-shadow: 0px 1px 0px 0px $orange-color;
-		}
-		@include media(sm) { margin-top: 15px; margin-bottom: 30px; font-size: 15px; }
-		@include media(md) { margin-bottom: 30px; }
-		@include media(xs) { margin-bottom: 25px; }
-	}
-
-	@include media(xs) { width: 90%; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); margin-bottom:40px;}
 }
 
 
@@ -192,3 +195,18 @@ section.footerLight{
 		}
 	@include media(xs) { padding: 20px 0px 10px; }
 }
+
+/* ---------END ENTRY PAGE------------- */ 
+
+
+
+
+
+
+
+/* ------------ CONTACTS PAGE------------- */ 
+
+
+
+
+/* ---------END CONTACTS PAGE------------- */ 

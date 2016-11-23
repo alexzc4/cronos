@@ -1,4 +1,4 @@
-angular.module('BlankApp', ['ngMaterial','ngRoute','slickCarousel'])
+angular.module('BlankApp', ['ngMaterial','ngRoute','slickCarousel','angular-loading-bar','ngAnimate','cfp.loadingBar'])
   .controller('AppCtrl', function ($scope, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
@@ -31,15 +31,15 @@ angular.module('BlankApp', ['ngMaterial','ngRoute','slickCarousel'])
 	})
 
     .controller('contactsCtrl', function ($scope, $templateCache) {
-	    $templateCache.remove('/pages/contacts.html');
-	    // or
+
 	    $templateCache.removeAll();
+        
     })
 
     .controller('projectsCtrl', function ($scope, $templateCache) {
-	    $templateCache.remove('/pages/projects.html');
-	    // or
+
 	    $templateCache.removeAll();
+       
     })
 
     .directive('includeReplace', function () {

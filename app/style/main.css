@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.bg-white {
+    background-color: white;
+}
+
+md-content {
+    background-color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -576,29 +584,115 @@ section.footerLight span:nth-child(2) {
     }
 }
 
-/* ---------END ENTRY PAGE------------- */
-/* ------------ CONTACTS PAGE------------- */
 #slider {
     position: absolute;
     top: 0;
     width: 100%;
     height: 740px;
     left: 0;
+    margin-top: 30px;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #slider {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #slider {
+        margin-top: 0px;
+    }
 }
 
 #slider .item {
     text-align: center;
+    position: relative;
+}
+
+#slider .item:before {
+    content: '';
+    display: block;
+    padding-top: 80%;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    #slider .item:before {
+        padding-top: 50%;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #slider .item:before {
+        padding-top: 0px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #slider .item:before {
+        padding-top: 0px;
+    }
 }
 
 #slider .item img {
-    height: 740px;
+    height: 750px;
     display: inline-block;
     min-width: 100%;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+    #slider .item img {
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #slider .item img {
+        height: 560px;
+    }
+}
+
 @media (max-width: 599px) {
     #slider .item img {
-        height: 300px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    #slider {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    }
+}
+
+@media (max-width: 599px) {
+    #slider {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
     }
 }
 
@@ -614,41 +708,281 @@ section.footerLight span:nth-child(2) {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: white;
 }
 
-.content .container .contactsTitle {
-    padding: 40px 0;
-    font-size: 14px;
-    color: #343534;
-    border-bottom: 1px solid #dedede;
+@media (min-width: 600px) and (max-width: 959px) {
+    .content {
+        margin-top: 30px;
+    }
 }
 
-.content .container .contactsTitle .contactsTitleSpan {
-    line-height: 35px;
-    margin-left: 15px;
-}
-
-.content .container .contactsWrapper {
-    margin-top: 20px;
-    padding-bottom: 35px;
-}
-
-.content .container .contactsWrapper .contactsBox {
-    margin-top: 20px;
-}
-
-.content .container .contactsWrapper .contactsBox span {
-    font-size: 15px;
-    color: #343534;
-    margin-top: 12px;
-    margin-bottom: 12px;
+@media (min-width: 960px) and (max-width: 1279px) {
+    .content {
+        margin-top: 350px;
+    }
 }
 
 @media (max-width: 599px) {
     .content {
         margin-top: 30px;
     }
+}
+
+/* ---------END ENTRY PAGE------------- */
+/* ------------ CONTACTS PAGE------------- */
+.contactsTitle {
+    padding: 40px 0;
+    font-size: 14px;
+    color: #343534;
+    border-bottom: 1px solid #dedede;
+}
+
+.contactsTitle .contactsTitleSpan {
+    line-height: 35px;
+    margin-left: 15px;
+}
+
+@media (max-width: 599px) {
+    .contactsTitle .contactsTitleSpan {
+        margin: 0 auto;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .contactsTitle {
+        padding: 25px 0;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .contactsTitle {
+        padding: 30px 0;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 599px) {
+    .contactsTitle {
+        padding: 10px 0;
+        font-size: 11px;
+        text-align: center;
+    }
+}
+
+.contactsWrapper {
+    margin-top: 20px;
+    padding-bottom: 35px;
+}
+
+.contactsWrapper .contactsBox {
+    margin-top: 20px;
+}
+
+.contactsWrapper .contactsBox div {
+    font-size: 15px;
+    color: #343534;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.contactsWrapper .contactsBox div i {
+    margin-right: 15px;
+}
+
+.contactsWrapper .contactsBox div span {
+    width: 100%;
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper .contactsBox div span {
+        font-size: 14px;
+    }
+}
+
+.contactsWrapper .contactsBox div a {
+    color: #343534;
+    text-decoration: none;
+}
+
+.contactsWrapper .contactsBox div a:hover {
+    border-bottom: 1px solid;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .contactsWrapper .contactsBox div {
+        font-size: 14px;
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
+}
+
+.contactsWrapper .contactsBox .downloadBox {
+    margin-top: 40px;
+}
+
+.contactsWrapper .contactsBox .downloadBox i {
+    color: #f8c65e;
+}
+
+.contactsWrapper .contactsBox .downloadLink {
+    margin-top: 0;
+}
+
+.contactsWrapper .contactsBox .downloadLink a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid;
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper .contactsBox .downloadLink a:hover {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper .contactsBox .downloadLink a {
+        border-bottom: 0;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .contactsWrapper .contactsBox {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .contactsWrapper .contactsBox {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper .contactsBox {
+        margin-top: 5px;
+    }
+}
+
+.contactsWrapper .mapBox {
+    position: relative;
+}
+
+.contactsWrapper .mapBox:before {
+    content: '';
+    padding-top: 65%;
+    display: block;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .contactsWrapper .mapBox:before {
+        padding-top: 60%;
+    }
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper .mapBox:before {
+        padding-top: 100%;
+    }
+}
+
+.contactsWrapper .mapBox iframe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .contactsWrapper .mapBox {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper .mapBox {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 599px) {
+    .contactsWrapper {
+        padding-bottom: 25px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    padding: 0 25px;
+}
+
+/* ---------END CONTACTS PAGE------------- */
+/* ------------ PROJECTS PAGE------------- */
+.projectsTitle {
+    width: 630px;
+    margin: 0 auto;
+    text-align: center;
+    border: 4px solid #f8c65e;
+    color: #343534;
+    font-size: 22px;
+    padding: 40px 0;
+    margin-top: 60px;
+    letter-spacing: .3px;
+    position: relative;
+}
+
+.projectsTitle .titleLogo {
+    position: absolute;
+    bottom: -30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 100px;
+    background-color: white;
+}
+
+.projectsTitle .titleLogo .titleLogoRound {
+    background-color: #f8c65e;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 100%;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.projectsWrapper {
+    margin-top: 75px;
+}
+
+.projectsWrapper .projectsBox > div {
+    position: relative;
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    top: 15px;
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.projectsWrapper .projectsBox > div:before {
+    padding-top: 100%;
+    display: block;
+    content: '';
 }
 
 /* ---------END CONTACTS PAGE------------- */

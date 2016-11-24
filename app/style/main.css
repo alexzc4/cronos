@@ -710,6 +710,12 @@ section.footerLight span:nth-child(2) {
     box-sizing: border-box;
 }
 
+@media (max-width: 599px) {
+    .content .container {
+        padding: 0 25px;
+    }
+}
+
 @media (min-width: 600px) and (max-width: 959px) {
     .content {
         margin-top: 30px;
@@ -918,14 +924,10 @@ section.footerLight span:nth-child(2) {
     }
 }
 
-@media (max-width: 599px) {
-    padding: 0 25px;
-}
-
 /* ---------END CONTACTS PAGE------------- */
 /* ------------ PROJECTS PAGE------------- */
 .projectsTitle {
-    width: 630px;
+    max-width: 630px;
     margin: 0 auto;
     text-align: center;
     border: 4px solid #f8c65e;
@@ -963,10 +965,21 @@ section.footerLight span:nth-child(2) {
 }
 
 .projectsWrapper .projectsBox > div {
+    margin-bottom: 50px;
     position: relative;
 }
 
 .projectsWrapper .projectsBox > div .projectImgWrapper {
+    position: relative;
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper:before {
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper a {
     position: absolute;
     left: 15px;
     right: 15px;
@@ -974,15 +987,105 @@ section.footerLight span:nth-child(2) {
     top: 15px;
 }
 
-.projectsWrapper .projectsBox > div .projectImgWrapper img {
+.projectsWrapper .projectsBox > div .projectImgWrapper a img {
     width: 100%;
     height: 100%;
 }
 
-.projectsWrapper .projectsBox > div:before {
-    padding-top: 100%;
-    display: block;
+.projectsWrapper .projectsBox > div .projectImgWrapper a:hover:before {
+    background-color: rgba(248, 198, 94, 0.7);
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper a:hover span {
+    opacity: 1;
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper a:before {
     content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    bottom: 0;
+    background-color: rgba(248, 198, 94, 0);
+}
+
+.projectsWrapper .projectsBox > div .projectImgWrapper a span {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    color: white;
+    font-size: 21px;
+    letter-spacing: .2px;
+}
+
+@media (max-width: 599px) {
+    .projectsWrapper .projectsBox > div .projectImgWrapper a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.projectsWrapper .projectsBox > div .projectTitleWrapper {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.projectsWrapper .projectsBox > div .projectTitleWrapper a {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.projectsWrapper .projectsBox > div .projectTitleWrapper a span {
+    color: #343534;
+    font-size: 14px;
+}
+
+.projectsWrapper .projectsBox > div .projectTitleWrapper a span:nth-child(2) {
+    margin-top: 7px;
+}
+
+.projectsWrapper .projectsBox > div .projectTitleWrapper a:hover {
+    text-decoration: auto;
+}
+
+@media (max-width: 599px) {
+    .projectsWrapper .projectsBox > div .projectTitleWrapper {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .projectContent .container {
+        padding: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .projectContent .container {
+        padding: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 599px) {
+    .projectContent .container {
+        padding: 0 0 20px 0;
+    }
 }
 
 /* ---------END CONTACTS PAGE------------- */

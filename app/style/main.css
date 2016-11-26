@@ -926,20 +926,89 @@ section.footerLight span:nth-child(2) {
 
 /* ---------END CONTACTS PAGE------------- */
 /* ------------ PROJECTS PAGE------------- */
-.projectsTitle {
+.containerLight {
     max-width: 630px;
     margin: 0 auto;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.divider {
+    width: 1px;
+    background-color: #dedede;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textBlock {
+    margin-bottom: 50px;
+}
+
+.textBlock .roundCaption {
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    background-color: #f8c65e;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.textBlock .titleCaption {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-size: 26px;
+    width: 100%;
+}
+
+.textBlock .textCaption {
+    padding: 35px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.textBlock .textCaption p {
+    margin-bottom: 30px;
+}
+
+.textBlock .textCaption p:last-child {
+    margin-bottom: 0;
+}
+
+.titleLight {
     text-align: center;
     border: 4px solid #f8c65e;
     color: #343534;
-    font-size: 22px;
-    padding: 40px 0;
+    font-size: 18px;
+    padding: 30px 30px 50px;
     margin-top: 60px;
     letter-spacing: .3px;
     position: relative;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    width: 100%;
 }
 
-.projectsTitle .titleLogo {
+.titleLight > *:nth-child(2) {
+    margin-top: 15px;
+}
+
+.titleLight span {
+    font-size: 15px;
+    display: inline-block;
+    line-height: 1.7;
+}
+
+.titleLight .titleLogo {
     position: absolute;
     bottom: -30px;
     margin: 0 auto;
@@ -950,7 +1019,7 @@ section.footerLight span:nth-child(2) {
     background-color: white;
 }
 
-.projectsTitle .titleLogo .titleLogoRound {
+.titleLight .titleLogo .titleLogoRound {
     background-color: #f8c65e;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -958,6 +1027,10 @@ section.footerLight span:nth-child(2) {
     height: 100%;
     width: 60px;
     margin: 0 auto;
+}
+
+.containerPadding {
+    padding: 0 35px;
 }
 
 .projectsWrapper {
@@ -1086,6 +1159,65 @@ section.footerLight span:nth-child(2) {
     .projectContent .container {
         padding: 0 0 20px 0;
     }
+}
+
+.workPartners > div {
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.workPartners > div div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.workPartners span {
+    margin-top: 40px;
+}
+
+.workLink {
+    margin-top: 40px;
+}
+
+.workLink a {
+    color: #343534;
+    margin-bottom: 20px;
+    text-decoration: none;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.workLink img {
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.projectImgContainer {
+    position: relative;
+    width: 100%;
+}
+
+.projectImgContainer div {
+    position: relative;
+}
+
+.projectImgContainer div:before {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+
+.projectImgContainer div a {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+}
+
+.projectImgContainer div a img {
+    height: 100%;
+    width: 100%;
 }
 
 /* ---------END CONTACTS PAGE------------- */

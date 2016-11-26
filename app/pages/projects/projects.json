@@ -1,0 +1,50 @@
+{
+    "sliderImgList": [
+        "img/sliders/projectsSliders/projectSlider.png",
+        "img/sliders/projectsSliders/projectSlider2.png"
+    ],
+    "projectsList": [
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image1.png", 
+            "name": "Жилой Комплекс RENASTERII", 
+            "location": "Кишинев"
+        }, 
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image2.png", 
+            "name": "Жилой Комплекс", 
+            "location": "Поселок Кондрица"
+        },
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image3.png", 
+            "name": "Многоуровневая Парковка (Тендер)", 
+            "location": "Аэропорт, Кишинев"
+        },
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image4.png", 
+            "name": "Реконструкция Эподрома", 
+            "location": "Кишинев"
+        },
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image5.png", 
+            "name": "Реконструкция UNO", 
+            "location": "Кишинев"
+        },
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image6.png", 
+            "name": "Туанхаусы", 
+            "location": "Ставчень"
+        },
+        {
+            "id": "realizovannii-proect-v-gorode-belci", 
+            "imageUrl": "img/projectsImg/image7.png", 
+            "name": "Церковный комплекс", 
+            "location": "Бельцы"
+        }     
+    ]
+}

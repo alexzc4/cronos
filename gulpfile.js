@@ -72,7 +72,7 @@ gulp.task('sass:watch', function() {
 gulp.task('bower', function () {
   gulp.src('app/*.html')
     .pipe(wiredep({
-      directory : "vendor",
+      directory : "app/vendor",
       // ignorePath: /^(\.\.\/)+/
     }))
     .pipe(notify("Complete!"))

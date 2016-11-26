@@ -1,0 +1,45 @@
+			 <slick infinite=true slides-to-show=1 slides-to-scroll=1 arrows=false dots=falsearrows=false id="slider"
+			 		ng-if="projects.sliderImgList.length">
+    			<div class="item" ng-repeat="slider in projects.sliderImgList">
+					<img ng-src="{{slider}}" alt="">
+				</div>
+    		</slick>
+
+			<section class="content projectContent" layout-align="center" layout="row">
+				<div class="container">
+
+					<div class="titleLight containerLight bg-white">
+						<h2>Проекты</h2>
+						
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img src="img/icons/img-icons/icon-build.png" alt="">
+							</div>
+						</div>
+					</div>
+
+					<div class="projectsWrapper" layout="column"  >
+						<div layout-wrap layout="row" class="projectsBox">
+							<div 
+								flex-xs="100"
+								flex-sm="50"
+								flex-md="33"
+								flex-gt-md="25" layout="column"  layout-align=" stretch" ng-repeat="project in projects.projectsList">
+
+								<div class="projectImgWrapper">
+									<a href="#/projects/{{project.id}}" class="md-whiteframe-1dp" layout-align="center">
+										<img ng-src="{{project.imageUrl}}" alt="">
+										<span><b>Открыть</b></span>
+									</a>
+								</div>
+								<div class="projectTitleWrapper" >
+									<a href="#/projects/{{project.id}}" layout="column" layout-align="stretch">
+										<span><b>{{project.name}}</b></span>
+										<span>{{project.location}}</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>

@@ -1,0 +1,77 @@
+			 <slick infinite=true slides-to-show=1 arrows=false dots=false  slides-to-scroll=1 id="slider" 
+			 		ng-if="work.sliderImgList.length">
+    			<div class="item" ng-repeat="slider in work.sliderImgList">
+					<img ng-src="{{slider}}" alt="">
+				</div>
+    		</slick>
+
+			<section class="content projectContent" layout-align="center" layout="row">
+				<div class="container" layout-align="start stretch" layout="column">
+
+					<div class="titleLight  containerLight bg-white">
+						<span>
+							{{work.title.subTitle}}
+						</span>
+						<h2 >{{work.title.mainTitle}}:</h2>
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img src="img/icons/img-icons/icon-bag.png" alt="">
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="workWrapper containerLight " layout="column" layout-align="start center" >
+						<div class="divider"></div>
+
+						<div class="textBlock" layout="column" layout-align="start center" ng-repeat="works in work.workList">
+
+							<div class="roundCaption" layout="row" layout-align="center center">
+								<span>{{works.id}}</span>
+							</div>	
+
+							<h3 class="titleCaption">
+								{{works.name}}
+							</h3>
+
+							<div class="textCaption md-whiteframe-4dp" >
+								<div ng-bind-html="works.text"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="titleLight containerLight bg-white">
+						<h2 >Партнеры</h2>
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img src="img/icons/img-icons/icon-people.png" alt="">
+							</div>
+						</div>
+					</div>
+
+					<div class="containerLight workPartners containerPadding" layout="column" layout-align="start stretch" >
+						<span><b>Наши партнеры, которые разделяют наше видение партнерских отношений и способы совместно решать клиентов из разных сфер бизнеса</b></span>
+						<div layout="row" layout-wrap>
+							<div flex=45  ng-repeat="partner in work.partners">{{partner}}</div>
+						</div>
+					</div>
+					
+					<div class="titleLight containerLight bg-white">
+						<h2 >Документы потверждающие компетентность</h2>
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img src="img/icons/img-icons/icon-people.png" alt="">
+							</div>
+						</div>
+					</div>
+		
+					<div class="workLink containerLight containerPadding" layout="column" layout-align="start stretch">
+						<a href="{{site.link}}" target="_blank" ng-repeat="site in work.links" layout="row" layout-align="start start">
+							<img src="img/icons/img-icons/icon-pdf.png" alt="">
+							<span>{{site.name}}</span>
+						</a>
+					</div>
+
+				</div>
+			</section>

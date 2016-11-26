@@ -1,5 +1,3 @@
 npm install -g bower gulp
 
-npm install --save bower gulp
-
-bower install --save jquery angular-material angular-route bootstrap#3.3.2 normalize.css
+В консоле в этой папке прописать npm install и bower install - для разработки проекта дальше

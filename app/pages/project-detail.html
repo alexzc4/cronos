@@ -1,0 +1,44 @@
+			 <slick infinite=true slides-to-show=1 slides-to-scroll=1 arrows=false dots=false id="slider" 
+			 		ng-if="project.sliderImgList.length">
+    			<div class="item" ng-repeat="slider in project.sliderImgList">
+					<img ng-src="{{slider}}" alt="">
+				</div>
+    		</slick>
+			<section class="content projectContent" layout-align="center" layout="row">
+				<div class="container">
+
+					<div class="titleLight containerLight bg-white">
+						<h2>{{project.name}}</h2>
+
+						<span>
+							{{project.subtitle}}
+						</span>
+
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img ng-src="{{project.titleIcon}}" alt="">
+							</div>
+						</div>
+					</div>
+
+					<div class="workWrapper containerLight" layout="column" layout-align="start center" >
+						<div class="divider"></div>
+
+						<div class="textBlock" layout="column" layout-align="start center" >
+							<div class="textCaption md-whiteframe-4dp" >
+								<div ng-bind-html="project.content"></div>
+							</div>
+						</div>
+
+						<div class="projectImgContainer" layout="row"  layout-wrap>
+							<div ng-repeat="image in project.images" flex=33 >
+								<a href="{{image}}" data-lightbox="gallery" class="md-whiteframe-2dp">
+									<img ng-src="{{image}}" alt="">
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</section>

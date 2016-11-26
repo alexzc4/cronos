@@ -5,8 +5,7 @@
 	<meta charset="UTF-8">
 	<title>КРОНОС</title>
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=.5, user-scalable=no">
-
-	 <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
@@ -42,21 +41,21 @@
 
 </head>
 
-<body  ng-controller="AppCtrl">
+<body ng-controller="AppCtrl">
 
-	<div ng-include src="'pages/partials/sidenav.html?i=1000'" include-replace></div>
+	<div ng-include src="'pages/partials/sidenav.html'" ></div>
 
 	<md-content layout-fill>
 
 		<div id="bodyContainer" layout="column" ng-cloak >
 
-			<div ng-include src="'pages/partials/header.html?i=1001'" include-replace></div>  
+			<div ng-include src="'pages/partials/header.html'"></div>  
 
 			<div ng-view ></div>
 
 		</div>
 
-		<div ng-include src="'pages/partials/footer.html?i=1000'" include-replace></div>
+		<div ng-include src="'pages/partials/footer.html'"></div>
 
 	</md-content>
 

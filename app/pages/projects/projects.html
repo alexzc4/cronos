@@ -27,13 +27,13 @@
 								flex-gt-md="25" layout="column"  layout-align=" stretch" ng-repeat="project in projects.projectsList">
 
 								<div class="projectImgWrapper">
-									<a href="#/projects/{{project.id}}" class="md-whiteframe-1dp" layout-align="center">
+									<a ui-sref="projectsD({ projectId: project.id })" class="md-whiteframe-1dp" layout-align="center">
 										<img ng-src="{{project.imageUrl}}" alt="">
 										<span><b>Открыть</b></span>
 									</a>
 								</div>
 								<div class="projectTitleWrapper" >
-									<a href="#/projects/{{project.id}}" layout="column" layout-align="stretch">
+									<a ui-sref="projectsD" layout="column" layout-align="stretch">
 										<span><b>{{project.name}}</b></span>
 										<span>{{project.location}}</span>
 									</a>

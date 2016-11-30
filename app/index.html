@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>КРОНОС</title>
+	<title ng-bind="pageTitle + ' - КРОНОС'"></title>
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=.5, user-scalable=no">
 	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css" />
 	<link rel="stylesheet" href="vendor/lightbox2/dist/css/lightbox.css" />
 	<!-- endbower -->
-
+	
 	<link rel="stylesheet" href="style/main.css">
 
 	<!-- bower:js -->
@@ -33,6 +33,7 @@
 	<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
 	<script src="vendor/lightbox2/dist/js/lightbox.js"></script>
 	<script src="vendor/angular-slick/dist/slick.js"></script>
+	<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
 	<!-- endbower -->
 
 
@@ -51,7 +52,7 @@
 
 			<div ng-include src="'pages/partials/header.html'"></div>  
 
-			<div ng-view ></div>
+			<div ui-view></div>
 
 		</div>
 

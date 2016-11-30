@@ -21,7 +21,6 @@
 //-----------------------------------
 
 
-
 //-------------VARIABLES-------------
 
 $orange-color : #f8c65e;
@@ -63,8 +62,40 @@ body{
 .container{
 	width: 100%;
     max-width: 1279px;
-    		margin-left: 15px;
-		margin-right: 15px;
+    margin-left: 15px;
+	margin-right: 15px;
+}
+
+.content{
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	margin-top: 500px;
+	.container{
+		padding: 0 35px;
+    	box-sizing: border-box;
+		@include media(xs){ padding: 0 25px; }
+		
+	}
+	@include media(sm){ margin-top: 30px; }
+	@include media(md){ margin-top: 350px; }
+	@include media(xs){ margin-top: 30px; }
+
+}
+
+.containerLight{
+	max-width: 630px;
+	margin: 0 auto;
+	width:100%;
+	box-sizing: border-box;
+}
+
+.divider{
+	width: 1px;
+	background-color: #dedede;
+	height: 70px;
+	margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #bodyContainer {
@@ -152,22 +183,32 @@ body{
 				font-size: 15px;
 				
 				&:hover{
-					transform: translate3d(0px,19px,0px);
+					a{
+						background-color: $orange-color;
+						transform: translate3d(0px,19px,0px);
+					}
 					
 				}
+
 				a{
 					text-decoration: none;
 					color: $link-footer-color;
 					font-weight: bold;
-					padding: 22px 15px;
+					padding: 22px 10px;
+					transition: all .1s linear;
 					
 					&:hover{
 						background-color: $orange-color;
 					}
-					@include media(sm){ padding: 0; }
-					@include media(md){ padding: 12px 7px;}
+					@include media(sm){ padding: 0; display: block; }
+					@include media(md){ padding: 14px 7px;}
+
+					&.active{
+						background-color: $orange-color;
+						transform: translate3d(0px,19px,0px);
+					}
 				}
-				@include media(sm){ font-size: 10px;}
+				@include media(sm){ font-size: 10px; height: 25px; letter-spacing: .2px; text-transform: uppercase;}
 				@include media(md){ font-size: 13px;}
 			}
 			@include media(xs){ display: none; }
@@ -187,9 +228,9 @@ body{
 		padding-left: 5px;
 		background-color: white;
 		padding-right: 5px;
-		@include media(xs){ height: 80px;}
-		@include media(sm){ height: 60px;}
-		@include media(md){ height: 80px;}
+		@include media(xs){ height: 60px; padding-left: 15px; padding-right: 15px;}
+		@include media(sm){ height: 80px; padding-left: 30px; padding-right: 30px;}
+		@include media(md){ height: 80px; padding-left: 15px; padding-right: 15px;}
 	}
 }
 
@@ -231,3 +272,128 @@ body{
 	}
 }
 
+#slider{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 740px;
+	left: 0;
+	margin-top: 30px;
+	@include media(md) { margin-top: 0px;}
+	@include media(gt-md) { margin-top: 0px;}
+	.item{
+		text-align: center;
+		position: relative;
+
+		
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 80%;
+			@include media(sm) { padding-top: 50%;}
+			@include media(md) { padding-top: 0px;}
+			@include media(gt-md) { padding-top: 0px;}
+		}
+		img{
+			    height: 750px;
+			    display: inline-block;
+			    min-width: 100%;
+			    @include media(sm){ height: 100%; position: absolute; left: 0px; right: 0px; top: 0; bottom: 0;}
+			    @include media(md){ height: 560px;}
+			    @include media(xs){ height: 100%; position: absolute; left: 0px; right: 0px; top: 0; bottom: 0;}
+		}
+	}
+	@include media(sm) { position: relative;  height:100%;  width: 100%;    width: auto; margin-left: 15px;
+    margin-right: 15px; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
+	@include media(xs) { position: relative;  height:100%;  width: 100%;    width: auto; margin-left: 15px;
+    margin-right: 15px; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
+}
+
+
+.textBlock{
+	margin-bottom: 50px;
+	.roundCaption{
+		height: 60px;
+	    width: 60px;
+	    text-align: center;
+	    background-color: #f8c65e;
+	    border-radius: 50%;
+	    color: white;
+	    font-weight: bold;
+	    font-size: 35px;
+	    margin-bottom: 20px;
+
+		span{
+
+		}
+	}
+	.titleCaption{
+	    margin-bottom: 20px;
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    text-align: center;
+	    font-size: 26px;
+	    width: 100%;
+	    @include media(xs){ font-size: 20px; }
+	}
+	.textCaption{
+		padding: 35px;
+		font-size: 16px;
+		line-height: 1.6;
+		p{
+			margin-bottom: 30px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		@include media(xs){ padding: 20px; font-size: 13px; }
+	}
+}
+
+.titleLight{
+	> *:nth-child(2){
+		margin-top: 15px;
+	}
+	text-align: center;
+	border:4px solid $orange-color;
+	color: $link-footer-color;
+	font-size: 18px;
+    padding: 30px 30px 50px;
+    margin-top: 60px;
+    letter-spacing: .3px;
+    position: relative;
+    margin-bottom: 30px;
+	line-height: 1.3;
+	width: 100%;
+	span{
+	  
+	    font-size: 15px;
+	    display: inline-block;
+	    line-height: 1.7;
+	}
+    .titleLogo{
+    	position: absolute;
+    	bottom: -30px;
+		margin: 0 auto;
+    	left: 0;
+    	right: 0;
+    	height: 60px;
+    	width: 100px;
+    	background-color: white;
+    	.titleLogoRound{
+    		background-color: $orange-color;
+    		border-radius: 50%;
+    		height: 100%;
+		    width: 60px;
+		    margin: 0 auto;
+    	}
+    }
+
+    @include media(xs){ padding: 15px 10px 50px; margin-top: 0; border:2px solid $orange-color; font-size: 11px; span{ font-size: 12px}}
+
+}
+
+.containerPadding{
+	padding: 0 35px;
+	@include media(xs){ padding: 0 20px; }
+}

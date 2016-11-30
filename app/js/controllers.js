@@ -1,4 +1,5 @@
-var cronosApp = angular.module('cronosApp', ['ngMaterial','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize'])
+
+var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize','ui.router'])
 
   cronosApp.controller('AppCtrl', function ($scope, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
@@ -9,34 +10,78 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngRoute','slick','ang
         $mdSidenav(componentId).toggle();
       }
     }
+
+
   });
 
-  cronosApp.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "pages/entry.html"
-    })
-    .when("/projects", {
-        templateUrl : "pages/projects/projects.html",
-        controller: 'projectsCtrl'
-    })
-    .when("/work", {
-        templateUrl : "pages/how-we-work/work.html",
-        controller: 'workCtrl'
-    })
-    .when("/contacts", {
-        templateUrl : "pages/contacts/contacts.html",
-        controller: 'contactsCtrl'
-    })
-    .when("/projects/:projectId", {
-        templateUrl : "pages/project-detail.html",
-        controller: 'projectDetailCtrl'
-    })
-    .otherwise({
-      redirectTo: '/contacts'
+  cronosApp.controller('HeaderController', function ($scope, $location) 
+  { 
+    $scope.getClass = function (path) {
+      return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+    }
+  })
+
+
+
+  cronosApp.config(function($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+        
+        .state('work', {
+            url: '/how-we-work',
+            cache: false,
+            templateUrl: 'pages/how-we-work/work.html',
+            controller: 'workCtrl',
+            title: 'Как мы работаем',    
+        })
+
+        .state('contacts', {
+            url: '/contacts',
+            cache: false,
+            templateUrl: 'pages/contacts/contacts.html',
+            controller: 'contactsCtrl',
+            title: 'Контакты',
+        })     
+
+        .state('projects', {
+            url: '/projects',
+            cache: false,
+            templateUrl: 'pages/projects/projects.html',
+            controller: 'projectsCtrl',
+            title: 'Проекты',
+        })  
+
+        .state('azs', {
+            url: '/azs',
+            cache: false,
+            templateUrl: 'pages/azs/azs.html',
+            controller: 'azsCtrl',
+            title: 'АЗС',
+        }) 
+
+        .state('projectsD', {
+            url: '/projects/{projectId}',
+            templateUrl: 'pages/project-detail.html',
+            title: 'Проекты',
+            controller: function($scope, $http, $location, $stateParams) {
+
+                $scope.projectId = $stateParams.projectId;
+
+                var url = 'pages/projects/'+$stateParams.projectId+'.json';
+
+                $http.get(url).success(function(data) {
+                  $scope.project = data;
+                });
+
+            }
+        })   
+  });
+
+  cronosApp.run(function($rootScope){
+    $rootScope.$on('$stateChangeSuccess', function (event, toState) {
+        $rootScope.pageTitle = toState.title;
     });
-
-  });
+});
 
   cronosApp.controller('contactsCtrl', function ($scope, $templateCache) {
     $templateCache.removeAll();
@@ -49,17 +94,18 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngRoute','slick','ang
 
   }]);
 
-  cronosApp.controller('workCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
+  cronosApp.controller('workCtrl',['$scope','$http', '$location','$state', function($scope, $http, $location,$state) {
+   $scope.reload = function(){
+      $state.reload('work');
+    }
+
     $http.get('pages/how-we-work/how-we-work.json').success(function(data, status, headers, config) {
       $scope.work = data;
     })
   }]);
 
-  cronosApp.controller('projectDetailCtrl',['$scope','$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
-      $scope.projectId = $routeParams.projectId;
-      var url = 'pages/projects/'+$routeParams.projectId+'.json';
-
-      $http.get(url).success(function(data) {
-        $scope.project = data;
-      });
+  cronosApp.controller('azsCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
+    $http.get('pages/azs/azs.json').success(function(data, status, headers, config) {
+      $scope.work = data;
+    })
   }]);

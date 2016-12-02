@@ -6,9 +6,9 @@
     		</slick>
 
 			<section class="content projectContent" layout-align="center" layout="row">
-				<div class="container" layout-align="start stretch" layout="column">
+				<div class="containerLight" layout-align="start stretch" layout="column">
 
-					<div class="titleLight  containerLight bg-white">
+					<div class="titleLight   bg-white">
 						<h2 >{{work.title.mainTitle}}</h2>
 						<span>
 							{{work.title.subTitle}}
@@ -22,7 +22,37 @@
 						</div>
 					</div>
 
-					<div class="workWrapper containerLight " layout="column" layout-align="start center" >
+					<div class="workWrapper  " layout="column" layout-align="start center" >
+						<div class="divider"></div>
+
+						<div class="textBlock" layout="column" layout-align="start center" ng-repeat="azs in work.azsList">
+
+							
+
+							<h3 class="titleCaption" ng-if="azs.name">
+								{{azs.name}}
+							</h3>
+
+							<div class="textCaption md-whiteframe-4dp" >
+								<div ng-bind-html="azs.text"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="titleLight   bg-white">
+						<h2 >{{work.title.mainSecondTitle}}</h2>
+					
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img src="img/icons/img-icons/icon-people.png" alt="">
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="workWrapper  " layout="column" layout-align="start center" >
 						<div class="divider"></div>
 
 						<div class="textBlock" layout="column" layout-align="start center" ng-repeat="works in work.workList">
@@ -42,36 +72,8 @@
 						</div>
 					</div>
 
-					<div class="titleLight containerLight bg-white">
-						<h2 >Партнеры</h2>
-						<div class="titleLogo">
-							<div class="titleLogoRound" layout="row" layout-align="center center">
-								<img src="img/icons/img-icons/icon-people.png" alt="">
-							</div>
-						</div>
-					</div>
-
-					<div class="containerLight workPartners containerPadding" layout="column" layout-align="start stretch" >
-						<span><b>Наши партнеры, которые разделяют наше видение партнерских отношений и способы совместно решать клиентов из разных сфер бизнеса</b></span>
-						<div layout="row" layout-wrap>
-							<div flex-gt-md=45 flex-md=45 flex-sm=45 flex-xs=100 ng-repeat="partner in work.partners">{{partner}}</div>
-						</div>
-					</div>
-					
-					<div class="titleLight containerLight bg-white">
-						<h2 >Документы потверждающие компетентность</h2>
-						<div class="titleLogo">
-							<div class="titleLogoRound" layout="row" layout-align="center center">
-								<img src="img/icons/img-icons/icon-people.png" alt="">
-							</div>
-						</div>
-					</div>
-		
-					<div class="workLink containerLight containerPadding" layout="column" layout-align="start stretch">
-						<a href="{{site.link}}" target="_blank" ng-repeat="site in work.links" layout="row" layout-align="start start">
-							<img src="img/icons/img-icons/icon-pdf.png" alt="">
-							<span>{{site.name}}</span>
-						</a>
+					<div class="buttonWrapper">
+						<md-button ui-sref="projects" md-no-ink class="projectButton">Реализованные проеты</md-button>
 					</div>
 
 				</div>

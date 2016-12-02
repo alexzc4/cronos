@@ -12,6 +12,12 @@ md-content {
     background-color: white;
 }
 
+.md-button .md-ripple-container {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +27,26 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-.container {
-    width: 100%;
-    max-width: 1279px;
-    margin-left: 15px;
-    margin-right: 15px;
+.projectButton {
+    background-color: #f8c65e;
+    color: #343534;
+    padding: 10px 25px;
+    margin: 0;
+    line-height: 25px;
+    font-weight: bold;
+    text-transform: inherit;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 3px solid #f8c65e;
+}
+
+.projectButton:hover {
+    background-color: white !important;
+}
+
+.buttonWrapper {
+    text-align: center;
 }
 
 .content {
@@ -33,19 +54,6 @@ body {
     position: relative;
     width: 100%;
     margin-top: 500px;
-}
-
-.content .container {
-    padding: 0 35px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-@media (max-width: 599px) {
-    .content .container {
-        padding: 0 25px;
-    }
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
@@ -66,6 +74,16 @@ body {
     }
 }
 
+.container {
+    max-width: 1279px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .containerLight {
     max-width: 630px;
     margin: 0 auto;
@@ -73,6 +91,13 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.container .containerLight, .container .container {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .divider {
@@ -81,6 +106,14 @@ body {
     height: 70px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 599px) {
+    .divider {
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
 }
 
 #bodyContainer {
@@ -486,8 +519,78 @@ body {
     }
 }
 
+.sampleTextTitle {
+    line-height: 1.6;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.statistic {
+    width: 100%;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+.statistic > div {
+    border-top: 10px solid #f8c65e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.statistic > div .statNumberWrapper {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #343534;
+    background-color: white;
+}
+
+.statistic > div .statTextWrapper {
+    color: #f8c65e;
+    font-size: 28px;
+    padding: 0 20px 20px;
+    letter-spacing: .5px;
+    line-height: 1.3;
+    background-color: white;
+}
+
+.parTitle {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.parTitle > div {
+    line-height: 1.6;
+    border-top: 10px solid #f8c65e;
+    border-bottom: 10px solid #f8c65e;
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+@media (max-width: 599px) {
+    .parTitle > div {
+        margin-bottom: 30px;
+        border-top: 5px solid #f8c65e;
+        border-bottom: 5px solid #f8c65e;
+    }
+}
+
 .textBlock {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+}
+
+.textBlock.noMargin {
+    margin-bottom: 0;
 }
 
 .textBlock .roundCaption {
@@ -502,20 +605,35 @@ body {
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.textBlock .titleDivider {
+    width: 80px;
+    height: 7px;
+    background-color: #343534;
+    margin-bottom: 20px;
 }
 
 .textBlock .titleCaption {
-    margin-bottom: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-bottom: 35px;
+    padding-left: 55px;
+    padding-right: 55px;
     text-align: center;
-    font-size: 26px;
+    font-size: 21px;
     width: 100%;
+}
+
+.textBlock .titleCaption.smallTitle {
+    font-size: 17px;
+    line-height: 1.6;
 }
 
 @media (max-width: 599px) {
     .textBlock .titleCaption {
         font-size: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 
@@ -530,6 +648,21 @@ body {
 }
 
 .textBlock .textCaption p:last-child {
+    margin-bottom: 0;
+}
+
+.textBlock .textCaption ol {
+    margin-left: 17px;
+    margin-bottom: 25px;
+}
+
+.textBlock .textCaption ol li {
+    list-style-type: decimal;
+    padding-left: 10px;
+    margin-bottom: 3px;
+}
+
+.textBlock .textCaption > *:last-child {
     margin-bottom: 0;
 }
 
@@ -552,6 +685,7 @@ body {
     margin-bottom: 30px;
     line-height: 1.3;
     width: 100%;
+    width: auto;
 }
 
 .titleLight > *:nth-child(2) {
@@ -562,6 +696,24 @@ body {
     font-size: 15px;
     display: inline-block;
     line-height: 1.7;
+}
+
+@media (max-width: 599px) {
+    .titleLight span {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .titleLight span {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .titleLight span {
+        font-size: 13px;
+    }
 }
 
 .titleLight .titleLogo {
@@ -586,8 +738,38 @@ body {
 }
 
 @media (max-width: 599px) {
+    .titleLight .titleLogo .titleLogoRound {
+        padding: 8px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 599px) {
+    .titleLight .titleLogo {
+        bottom: -20px;
+        height: 40px;
+        width: 60px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
     .titleLight {
-        padding: 15px 10px 50px;
+        font-size: 15px;
+        margin-top: 0;
+        border: 3px solid #f8c65e;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .titleLight {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 599px) {
+    .titleLight {
+        padding: 15px 20px 30px;
+        font-size: 13px;
         margin-top: 0;
         border: 2px solid #f8c65e;
         font-size: 11px;
@@ -899,6 +1081,8 @@ section.footerLight span:nth-child(2) {
 /* ------------ CONTACTS PAGE------------- */
 .contactsTitle {
     padding: 40px 0;
+    margin-left: 35px;
+    margin-right: 35px;
     font-size: 14px;
     color: #343534;
     border-bottom: 1px solid #dedede;
@@ -937,12 +1121,14 @@ section.footerLight span:nth-child(2) {
         padding: 10px 0;
         font-size: 11px;
         text-align: center;
+        margin-right: 25px;
+        margin-left: 25px;
     }
 }
 
 .contactsWrapper {
     margin-top: 20px;
-    padding-bottom: 35px;
+    padding: 0 35px 35px;
 }
 
 .contactsWrapper .contactsBox {
@@ -1080,8 +1266,8 @@ section.footerLight span:nth-child(2) {
 
 @media (max-width: 599px) {
     .contactsWrapper {
-        padding-bottom: 25px;
         margin-top: 10px;
+        padding: 0 25px 25px;
     }
 }
 
@@ -1274,15 +1460,30 @@ section.footerLight span:nth-child(2) {
 
 .projectImgContainer div a {
     position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    top: 15px;
+    bottom: 15px;
 }
 
 .projectImgContainer div a img {
     height: 100%;
     width: 100%;
+}
+
+@media (max-width: 599px) {
+    .projectImgContainer div a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 599px) {
+    .projectImgContainer div {
+        margin-bottom: 30px;
+    }
 }
 
 /* ---------END PROJECT PAGE------------- */

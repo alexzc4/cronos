@@ -1,0 +1,87 @@
+			 <slick infinite=true slides-to-show=1 arrows=false dots=false  slides-to-scroll=1 id="slider" 
+			 		ng-if="communication.sliderImgList.length">
+    			<div class="item" ng-repeat="slider in communication.sliderImgList">
+					<img ng-src="{{slider}}" alt="">
+				</div>
+    		</slick>
+
+			<section class="content projectContent" layout-align="center" layout="row">
+			<div class="container" layout-align="center center" layout="column">
+
+					<div class="containerLight" layout-align="start stretch" layout="column">
+
+						<div class="titleLight   bg-white">
+
+							<h2 >{{communication.title.mainTitle}}:</h2>
+							<span>
+								{{communication.title.subTitle}}
+							</span>
+							
+							<div class="titleLogo">
+								<div class="titleLogoRound" layout="row" layout-align="center center">
+									<img src="img/icons/img-icons/icon-crane.png" alt="">
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="sampleTextTitle">
+							<span>{{communication.insertSubTitle}}</span>
+						</div>
+					</div>
+
+					
+
+					<div class="container">
+						<div class="parTitle" layout="row" flex=100 layout-align="space-between stretch" layout-wrap>
+							<div flex-xs=100 flex-gt-md=15 ng-repeat="title in communication.titleList" layout="row" layout-align="center center"><span>{{title.title}}</span></div>
+						</div>
+					</div>
+
+					<div class="containerLight">
+						<div class="textBlock noMargin" layout="column" layout-align="start center">
+
+								<div class="titleDivider"></div>
+
+								<h3 class="titleCaption smallTitle">
+									{{communication.insertTitle}}
+								</h3>
+
+						</div>
+					</div>
+					
+					
+					<div class="container">
+						<div class="statistic" layout="row" flex=100 layout-align="space-around stretch" layout-wrap>
+							<div class="md-whiteframe-4dp" 
+							flex-xs=85 
+							flex-sm=45
+							flex-md=20
+							flex-gt-md=20  layout="column" layout-align-gt-md="start stretch" 
+							ng-repeat="foo in communication.badgeList">
+
+								<div class="statNumberWrapper" count-to="{{foo.score}}" value="0" duration="2"></div>
+								<div class="statTextWrapper" layout="row" layout-align="center">{{foo.title}}</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="containerLight">
+						<div class="textBlock" layout="column" layout-align="start center" ng-repeat="text in communication.communicationList">
+
+							<div class="titleDivider"></div>
+
+							<h3 class="titleCaption">
+								{{text.name}}
+							</h3>
+
+							<div class="textCaption md-whiteframe-4dp" >
+								<div ng-bind-html="text.text"></div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>

@@ -46,6 +46,10 @@ $main-font: 'Open Sans', sans-serif;
 md-content{
 	background-color: white;
 }
+
+.md-button .md-ripple-container{
+	border-radius: 0;
+}
 //-----------------------------------
 
 
@@ -59,11 +63,25 @@ body{
 	font-family: $main-font;
 }
 
-.container{
-	width: 100%;
-    max-width: 1279px;
-    margin-left: 15px;
-	margin-right: 15px;
+.projectButton{
+	background-color: $orange-color;
+	color: $link-footer-color;
+    padding: 10px 25px;
+    margin: 0;
+    line-height: 25px;
+    font-weight: bold;
+    text-transform: inherit;
+    border-radius: 0;
+    border: 3px solid $orange-color;
+    &:hover{
+    	background-color:white !important;
+    }
+}
+
+
+
+.buttonWrapper{
+	text-align: center;
 }
 
 .content{
@@ -71,16 +89,19 @@ body{
 	position: relative;
 	width: 100%;
 	margin-top: 500px;
-	.container{
-		padding: 0 35px;
-    	box-sizing: border-box;
-		@include media(xs){ padding: 0 25px; }
-		
-	}
+
 	@include media(sm){ margin-top: 30px; }
 	@include media(md){ margin-top: 350px; }
 	@include media(xs){ margin-top: 30px; }
 
+}
+
+.container{
+    max-width: 1279px;
+    margin-left: 15px;
+	margin-right: 15px;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .containerLight{
@@ -88,6 +109,13 @@ body{
 	margin: 0 auto;
 	width:100%;
 	box-sizing: border-box;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.container .containerLight, .container .container{
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .divider{
@@ -96,6 +124,7 @@ body{
 	height: 70px;
 	margin-top: 20px;
     margin-bottom: 20px;
+    @include media(xs){ height: 60px; margin-top: 10px; margin-bottom: 25px;  }
 }
 
 #bodyContainer {
@@ -309,32 +338,104 @@ body{
     margin-right: 15px; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
 }
 
+.sampleTextTitle{
+	line-height: 1.6;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.statistic{
+	width: 100%;
+	margin-bottom: 70px;
+	margin-top: 20px;
+	> div{
+		border-top: 10px solid $orange-color;
+		text-align: center;
+		margin-bottom: 30px;
+		.statNumberWrapper{
+			font-size: 60px;
+			font-weight: bold;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			color: $link-footer-color;
+			background-color: white;
+		}
+		.statTextWrapper{
+			color: $orange-color;
+			font-size: 28px;
+		    padding: 0 20px 20px;
+		    letter-spacing: .5px;
+		    line-height: 1.3;
+		    background-color: white;
+		}
+
+	}
+}
+
+.parTitle{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	> div{
+		line-height: 1.6;
+		border-top: 10px solid $orange-color;
+		border-bottom: 10px solid $orange-color;
+		padding: 20px 0;
+		font-size: 15px;
+		text-align: center;
+		font-weight: bold;
+		text-transform: lowercase;
+		@include media(xs){
+			margin-bottom: 30px;
+			border-top: 5px solid $orange-color;
+			border-bottom: 5px solid $orange-color;
+		}
+	}
+}
 
 .textBlock{
-	margin-bottom: 50px;
+	margin-bottom: 70px;
+		&.noMargin{
+		margin-bottom: 0;
+	}
 	.roundCaption{
 		height: 60px;
 	    width: 60px;
 	    text-align: center;
-	    background-color: #f8c65e;
+	    background-color: $orange-color;
 	    border-radius: 50%;
 	    color: white;
 	    font-weight: bold;
 	    font-size: 35px;
 	    margin-bottom: 20px;
-
+		line-height: 1.4;
 		span{
 
 		}
 	}
+	.titleDivider{
+		width: 80px;
+		height: 7px;
+		background-color: $link-footer-color;
+		margin-bottom: 20px;
+	}
 	.titleCaption{
-	    margin-bottom: 20px;
-	    padding-left: 30px;
-	    padding-right: 30px;
+	    margin-bottom: 35px;
+    	padding-left: 55px;
+    	padding-right: 55px;
 	    text-align: center;
-	    font-size: 26px;
+	    font-size: 21px;
 	    width: 100%;
-	    @include media(xs){ font-size: 20px; }
+	    &.smallTitle{
+	    	font-size: 17px;
+	    	line-height: 1.6;
+	    }
+	    @include media(xs){ font-size: 20px; padding-right: 20px; padding-left: 20px }
 	}
 	.textCaption{
 		padding: 35px;
@@ -346,6 +447,18 @@ body{
 				margin-bottom: 0;
 			}
 		}
+		ol{
+			margin-left: 17px;
+			margin-bottom: 25px;
+			li{
+				list-style-type: decimal;
+ 				padding-left: 10px;
+ 				margin-bottom: 3px;
+			}
+		}
+		> *:last-child{
+			margin-bottom: 0;
+		}
 		@include media(xs){ padding: 20px; font-size: 13px; }
 	}
 }
@@ -354,6 +467,7 @@ body{
 	> *:nth-child(2){
 		margin-top: 15px;
 	}
+
 	text-align: center;
 	border:4px solid $orange-color;
 	color: $link-footer-color;
@@ -365,11 +479,15 @@ body{
     margin-bottom: 30px;
 	line-height: 1.3;
 	width: 100%;
+    width: auto;
 	span{
 	  
 	    font-size: 15px;
 	    display: inline-block;
 	    line-height: 1.7;
+	    @include media(xs){ font-size: 13px; }
+	    @include media(sm){ font-size: 13px; }
+	    @include media(md){ font-size: 13px; }
 	}
     .titleLogo{
     	position: absolute;
@@ -386,10 +504,13 @@ body{
     		height: 100%;
 		    width: 60px;
 		    margin: 0 auto;
+		    @include media(xs){ padding:8px; width: 40px; }
     	}
+    	@include media(xs){ bottom:-20px; height:40px; width:60px; }
     }
-
-    @include media(xs){ padding: 15px 10px 50px; margin-top: 0; border:2px solid $orange-color; font-size: 11px; span{ font-size: 12px}}
+	@include media(sm){ font-size: 15px; margin-top:0; border: 3px solid #f8c65e;}
+    @include media(md){ font-size: 15px; }
+    @include media(xs){ padding: 15px 20px 30px; font-size:13px; margin-top: 0; border:2px solid $orange-color; font-size: 11px; span{ font-size: 12px}}
 
 }
 

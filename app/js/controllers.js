@@ -1,5 +1,5 @@
 
-var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize','ui.router'])
+var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize','ui.router','countTo'])
 
   cronosApp.controller('AppCtrl', function ($scope, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
@@ -59,6 +59,14 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
             title: 'АЗС',
         }) 
 
+        .state('communication', {
+            url: '/communication',
+            cache: false,
+            templateUrl: 'pages/communication/communication.html',
+            controller: 'communicationCtrl',
+            title: 'Инженерные коммуникации',
+        })  
+
         .state('projectsD', {
             url: '/projects/{projectId}',
             templateUrl: 'pages/project-detail.html',
@@ -76,6 +84,11 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
             }
         })   
   });
+
+  cronosApp.config(["$locationProvider","$urlRouterProvider", function($locationProvider,$urlRouterProvider) {
+   $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/');
+}]);
 
   cronosApp.run(function($rootScope){
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {
@@ -107,5 +120,11 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
   cronosApp.controller('azsCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
     $http.get('pages/azs/azs.json').success(function(data, status, headers, config) {
       $scope.work = data;
+    })
+  }]);
+
+  cronosApp.controller('communicationCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
+    $http.get('pages/communication/communication.json').success(function(data, status, headers, config) {
+      $scope.communication = data;
     })
   }]);

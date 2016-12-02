@@ -18,7 +18,7 @@
 						flex-gt-md=60 flex-offset-gt-md=10 hide-sm>
 
 						<ul layout="row" layout-align="space-between center" layout-fill>
-							<li><a href="javscript:void(0)" layout-fill layout="row" layout-align="center center"><span >Группа компании</span></a></li>
+							<li><a ui-sref="communication" ui-sref-opts="{ reload: true }" ng-class="getClass('/communication')" layout-fill layout="row" layout-align="center center"><span >Группа компании</span></a></li>
 							<li><a ui-sref="azs" ui-sref-opts="{ reload: true }" ng-class="getClass('/azs')" layout-fill layout="row" layout-align="center center"><span >Виды деятельности</span></a></li>
 							<li><a  ui-sref="work" ui-sref-opts="{ reload: true }" ng-class="getClass('/how-we-work')"  layout-fill layout="row" layout-align="center center"><span >Как мы работаем</span></a></li>
 							<li><a ui-sref="projects" ui-sref-opts="{ reload: true }" ng-class="getClass('/projects')" layout-fill layout="row" layout-align="center center"><span >Проекты</span></a></li>

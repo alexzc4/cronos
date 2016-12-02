@@ -85,10 +85,6 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
         })   
   });
 
-  cronosApp.config(["$locationProvider","$urlRouterProvider", function($locationProvider,$urlRouterProvider) {
-   $locationProvider.html5Mode(true);
-        $urlRouterProvider.otherwise('/');
-}]);
 
   cronosApp.run(function($rootScope){
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {

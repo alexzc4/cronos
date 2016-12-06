@@ -1,5 +1,5 @@
 	<md-sidenav class="md-sidenav-right mainSidenav" md-component-id="left"
-                 md-whiteframe="4" hide-gt-md hide-gt hide-md hide-lg  layout="column">
+                 md-whiteframe="4" hide-gt-md hide-gt hide-md hide-lg  layout="column" >
 		<md-toolbar layout="row" layout-align="end center">
 	       		<md-button  ng-click="toggleLeft()" class="md-primary closeSidenav" aria-label="Settings">
 					<md-icon md-svg-icon="img/icons/angle-right.svg"></md-icon>
@@ -7,13 +7,30 @@
 				<img src="img/logo.png" alt="" >
 	    </md-toolbar>
 		
-		<md-content layout-align="center center" layout-fill layout="row">
-	        <ul layout="column" layout-align="stretch" >
+		<md-content layout-align="center center" layout-fill layout="row" >
+	        <ul layout="column" layout-align="stretch" ng-controller="SidenavController">
 								<li><a href="javscript:void(0)" layout-fill>Группа компании</a></li>
-								<li><a href="javscript:void(0)">Виды деятельности</a></li>
-								<li><a href="#/work" ng-click="toggleLeft()">Как мы работаем</a></li>
-								<li><a href="#/projects" ng-click="toggleLeft()">Проекты</a></li>
-								<li><a href="#/contacts" ng-click="toggleLeft()">Контакты</a></li>
+								
+								<md-menu>
+						          
+						          <li><a ng-click="$mdOpenMenu($event)">Виды деятельности</a></li>
+
+						          <md-menu-content width="2">
+						            <md-menu-item>
+						              <md-button ng-click="toggleLeft()" ng-class="getClass('/activities/azs')" ui-sref="azs" ui-sref-opts="{ reload: true }"> <span>АЗС</span> </md-button>
+						            </md-menu-item>
+						            <md-menu-item >
+						              <md-button ng-click="toggleLeft()" ng-class="getClass('/activities/communication')" ui-sref="communication" ui-sref-opts="{ reload: true }"> <span>Инженерные коммунникации</span> </md-button>
+						            </md-menu-item>
+						            <md-menu-item >
+						              <md-button ng-click="toggleLeft()"> <span>Услуги</span> </md-button>
+						            </md-menu-item>
+						          </md-menu-content>
+						        </md-menu>
+
+								<li><a ui-sref="work" ui-sref-opts="{ reload: true }" ng-class="getClass('/how-we-work')" ng-click="toggleLeft()">Как мы работаем</a></li>
+								<li><a ui-sref="projects" ui-sref-opts="{ reload: true }" ng-class="getClass('/projects')"  ng-click="toggleLeft()">Проекты</a></li>
+								<li><a ui-sref="contacts" ui-sref-opts="{ reload: true }" ng-class="getClass('/contacts')"  ng-click="toggleLeft()">Контакты</a></li>
 			</ul>
 	    </md-content>
 

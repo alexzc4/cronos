@@ -1,5 +1,5 @@
 
-var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize','ui.router','countTo'])
+var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize','ui.router'])
 
   cronosApp.controller('AppCtrl', function ($scope, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
@@ -21,6 +21,19 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
     }
   })
 
+  cronosApp.controller('FooterController', function ($scope, $location) 
+  { 
+    $scope.getClass = function (path) {
+      return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+    }
+  })
+
+  cronosApp.controller('SidenavController', function ($scope, $location) 
+  { 
+    $scope.getClass = function (path) {
+      return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+    }
+  })
 
 
   cronosApp.config(function($stateProvider, $urlRouterProvider) {
@@ -52,7 +65,7 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
         })  
 
         .state('azs', {
-            url: '/azs',
+            url: '/activities/azs',
             cache: false,
             templateUrl: 'pages/azs/azs.html',
             controller: 'azsCtrl',
@@ -60,7 +73,7 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
         }) 
 
         .state('communication', {
-            url: '/communication',
+            url: '/activities/communication',
             cache: false,
             templateUrl: 'pages/communication/communication.html',
             controller: 'communicationCtrl',

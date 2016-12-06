@@ -18,9 +18,18 @@
 						flex-gt-md=60 flex-offset-gt-md=10 hide-sm>
 
 						<ul layout="row" layout-align="space-between center" layout-fill>
-							<li><a ui-sref="communication" ui-sref-opts="{ reload: true }" ng-class="getClass('/communication')" layout-fill layout="row" layout-align="center center"><span >Группа компании</span></a></li>
-							<li><a ui-sref="azs" ui-sref-opts="{ reload: true }" ng-class="getClass('/azs')" layout-fill layout="row" layout-align="center center"><span >Виды деятельности</span></a></li>
-							<li><a  ui-sref="work" ui-sref-opts="{ reload: true }" ng-class="getClass('/how-we-work')"  layout-fill layout="row" layout-align="center center"><span >Как мы работаем</span></a></li>
+							<li><a   layout-fill layout="row" layout-align="center center"><span >Группа компании</span></a></li>
+							<li class="linked" layout="column" layout-align="start stretch">
+								<a  ng-class="getClass('/activities')"  layout-fill layout="row" layout-align="center center">
+									<span >Виды деятельности</span>
+								</a>
+								<ul layout="column" layout-align="start stretch">
+									<li><a ng-class="getClass('/activities/azs')" ui-sref="azs" ui-sref-opts="{ reload: true }">АЗС</a></li>
+									<li><a ng-class="getClass('/activities/communication')" ui-sref="communication" ui-sref-opts="{ reload: true }">Инженерные коммунникации</a></li>
+									<li><a href="">Услуги</a></li>
+								</ul>
+							</li>
+							<li><a ui-sref="work" ui-sref-opts="{ reload: true }" ng-class="getClass('/how-we-work')"  layout-fill layout="row" layout-align="center center"><span >Как мы работаем</span></a></li>
 							<li><a ui-sref="projects" ui-sref-opts="{ reload: true }" ng-class="getClass('/projects')" layout-fill layout="row" layout-align="center center"><span >Проекты</span></a></li>
 							<li><a ui-sref="contacts" ui-sref-opts="{ reload: true }" ng-class="getClass('/contacts')"  layout-fill layout="row" layout-align="center center"><span >Контакты</span></a></li>
 						</ul>

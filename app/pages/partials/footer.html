@@ -1,4 +1,4 @@
-<section id="footer" >
+<section id="footer" ng-controller="FooterController">
 			<div class="footerUp" layout="row" layout-align="center">
 
 				<div class="container" 
@@ -26,9 +26,9 @@
 
 						<li ><a href="javascript:void(0)">Группа компании</a></li>
 						<li ><a href="javascript:void(0)">Виды деятельности</a></li>
-						<li ><a href="javascript:void(0)">Как мы работаем</a></li>
-						<li ><a href="javascript:void(0)">Проекты</a></li>
-						<li ><a href="javascript:void(0)">Контакты</a></li>
+						<li ><a ui-sref="work" ui-sref-opts="{ reload: true }" ng-class="getClass('/how-we-work')" >Как мы работаем</a></li>
+						<li ><a ui-sref="projects" ui-sref-opts="{ reload: true }" ng-class="getClass('/projects')" >Проекты</a></li>
+						<li ><a ui-sref="contacts" ui-sref-opts="{ reload: true }" ng-class="getClass('/contacts')" >Контакты</a></li>
 					</ul>
 				</div>
 			</div>

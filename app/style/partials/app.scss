@@ -50,6 +50,24 @@ md-content{
 .md-button .md-ripple-container{
 	border-radius: 0;
 }
+
+md-menu-content{
+	padding: 0;
+	
+	.md-button{
+		color: $link-footer-color !important;
+		background-color: white !important;
+	}
+
+	.md-button.active {
+    background-color: rgba(248, 198, 94, 0.84) !important;
+    color: white !important;
+	}
+}
+
+
+
+
 //-----------------------------------
 
 
@@ -166,6 +184,9 @@ body{
 					&:hover{
 						box-shadow: 0px 1px 0px 0px $orange-color;
 					}
+					&.active{
+						box-shadow: 0px 1px 0px 0px $orange-color;
+					}
 
 					@include media(xs){ padding-bottom: 3px; letter-spacing: .2px;}
 				}
@@ -210,8 +231,9 @@ body{
 				list-style-type: none;
 				float: left;
 				font-size: 15px;
-				
+				position: relative;
 				&:hover{
+
 					a{
 						background-color: $orange-color;
 						transform: translate3d(0px,19px,0px);
@@ -225,7 +247,8 @@ body{
 					font-weight: bold;
 					padding: 22px 10px;
 					transition: all .1s linear;
-					
+					line-height: 18px;
+					cursor: pointer;
 					&:hover{
 						background-color: $orange-color;
 					}
@@ -235,6 +258,66 @@ body{
 					&.active{
 						background-color: $orange-color;
 						transform: translate3d(0px,19px,0px);
+					}
+				}
+				&.linked{
+					&:hover{
+						ul{
+							visibility: visible;
+  							opacity: 1;
+  							transform: translate3d(0px,19px,0px);
+  							
+						}
+					}
+					ul{
+						visibility: hidden;
+					  	opacity: 0;
+					  	
+					    transition: all 0.1s linear;
+						width: 100%;
+						background-color: $orange-color;
+						position: absolute;
+						top:100%;
+						padding:10px 30px;
+						@include media(md){ padding:10px 23px; }
+						li{
+							width: 100%;
+							text-align: left;
+							margin-bottom: 10px;
+							&:hover{
+								a{
+									font-weight:bold;
+								}
+							}
+							a{
+								width: 100%;
+								padding: 0;
+								background-color: transparent;
+								font-weight: normal;
+								    font-size: 14px;
+								    @include media(md){ font-size: 11px;  }
+								&.active{
+									font-weight: bold;
+									position: relative;
+									&:before{
+									    left: -18px;
+									    border: solid transparent;
+									    content: " ";
+									    height: 0;
+									    width: 0px;
+									    position: absolute;
+									    pointer-events: none;
+									    border-color: transparent;
+									    border-left-color: $link-footer-color;
+									    border-width: 6px;
+									   
+									    top: 50%;
+    									transform: translate3d(0,-50%,0);
+    									@include media(md){ border-width: 4px; left: -13px; }
+									}
+								}
+							}
+						}
 					}
 				}
 				@include media(sm){ font-size: 10px; height: 25px; letter-spacing: .2px; text-transform: uppercase;}
@@ -285,6 +368,7 @@ body{
 			a{
 				color:$black-color;
 				text-decoration: none;
+				cursor: pointer;
 			}
 		}
 	}
@@ -305,7 +389,7 @@ body{
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 740px;
+	
 	left: 0;
 	margin-top: 30px;
 	@include media(md) { margin-top: 0px;}
@@ -332,9 +416,9 @@ body{
 			    @include media(xs){ height: 100%; position: absolute; left: 0px; right: 0px; top: 0; bottom: 0;}
 		}
 	}
-	@include media(sm) { position: relative;  height:100%;  width: 100%;    width: auto; margin-left: 15px;
+	@include media(sm) { position: relative;   width: 100%;    width: auto; margin-left: 15px;
     margin-right: 15px; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
-	@include media(xs) { position: relative;  height:100%;  width: 100%;    width: auto; margin-left: 15px;
+	@include media(xs) { position: relative;    width: 100%;    width: auto; margin-left: 15px;
     margin-right: 15px; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
 }
 
@@ -364,6 +448,9 @@ body{
 			margin-bottom: 15px;
 			color: $link-footer-color;
 			background-color: white;
+			@include media(xs){ font-size: 45px; }
+			@include media(sm){ font-size: 45px; margin-bottom: 10px; margin-top: 10px;  }
+			@include media(md){ font-size: 45px; margin-bottom: 10px; margin-top: 10px;  }
 		}
 		.statTextWrapper{
 			color: $orange-color;
@@ -372,9 +459,18 @@ body{
 		    letter-spacing: .5px;
 		    line-height: 1.3;
 		    background-color: white;
+		    @include media(xs){ font-size: 20px;  }
+		    @include media(sm){ font-size: 20px;  }
+		    @include media(md){ font-size: 20px;  }
 		}
-
+		@include media(xs){ border-top: 5px solid $orange-color;  }
+		@include media(sm){ border-top: 8px solid $orange-color;  }
+		@include media(md){ border-top: 8px solid $orange-color;  }
+		
 	}
+	@include media(xs){ margin-bottom: 40px;  }
+	@include media(sm){ margin-bottom: 40px;  }
+	@include media(md){ margin-bottom: 40px;  }
 }
 
 .parTitle{
@@ -390,12 +486,42 @@ body{
 		text-align: center;
 		font-weight: bold;
 		text-transform: lowercase;
-		@include media(xs){
-			margin-bottom: 30px;
-			border-top: 5px solid $orange-color;
-			border-bottom: 5px solid $orange-color;
+		@include media(sm){ 
+			border-top: 4px solid $orange-color;
+			border-bottom: 4px solid $orange-color;
+			padding: 10px 5px;
+			margin-bottom: 40px;
+			&:nth-child(4){
+				margin-bottom: 0px;
+			}
+			&:nth-child(5){
+				margin-bottom: 0px;	
+			}
+			&:nth-child(6){
+				margin-bottom: 0px;
+			}
 		}
+		@include media(md){ 
+			border-top: 4px solid $orange-color;
+			border-bottom: 4px solid $orange-color;
+			padding:8px 0;
+			font-size: 13px;
+		}
+		@include media(xs){
+			
+			border-top: 3px solid $orange-color;
+			border-bottom: 0px solid $orange-color;
+			&:last-child{
+				border-bottom: 3px solid $orange-color;
+			}
+		}
+
 	}
+	@include media(xs){
+			margin-bottom: 40px;
+			width: 85%;
+			margin-left: 7.5%;
+		}
 }
 
 .textBlock{

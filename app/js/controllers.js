@@ -80,6 +80,14 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
             title: 'Инженерные коммуникации',
         })  
 
+        .state('reviews', {
+            url: '/activities/reviews',
+            cache: false,
+            templateUrl: 'pages/reviews/reviews.html',
+            controller: 'reviewsCtrl',
+            title: 'Отзывы',
+        }) 
+
         .state('projectsD', {
             url: '/projects/{projectId}',
             templateUrl: 'pages/project-detail.html',
@@ -131,6 +139,12 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
       $scope.work = data;
     })
   }]);
+
+  cronosApp.controller('reviewsCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
+    $http.get('pages/reviews/reviews.json').success(function(data, status, headers, config) {
+      $scope.reviews = data;
+    })
+  }]);  
 
   cronosApp.controller('communicationCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
     $http.get('pages/communication/communication.json').success(function(data, status, headers, config) {

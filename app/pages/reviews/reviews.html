@@ -1,0 +1,46 @@
+			 <slick infinite=true slides-to-show=1 arrows=false dots=false  slides-to-scroll=1 id="slider" 
+			 		ng-if="reviews.sliderImgList.length">
+    			<div class="item" ng-repeat="slider in reviews.sliderImgList">
+					<img ng-src="{{slider}}" alt="">
+				</div>
+    		</slick>
+
+			<section class="content projectContent" layout-align="center" layout="row">
+				<div class="containerLight" layout-align="start stretch" layout="column">
+
+					<div class="titleLight   bg-white">
+						<h2 >{{reviews.title.mainTitle}}</h2>
+						
+						<div class="titleLogo">
+							<div class="titleLogoRound" layout="row" layout-align="center center">
+								<img src="img/icons/img-icons/icon-chat.png" alt="">
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="reviewWrapper" layout="column" layout-align="start stretch" ng-repeat="review in reviews.reviewsList">
+						<span class="revName">{{review.name}}</span>
+						<div class="revXsQuote"><img src="img/icons/img-icons/icon-quote-left.png" alt=""></div>
+						<div layout-xs="column" layout-align-xs="start center"
+							 layout-sm="row" layout-align-sm="space-between start"
+							 layout-md="row" layout-align-md="space-between start"
+							 layout-gt-md="row" layout-align-gt-md="space-between start" class="revPosition">
+							<span>{{review.position}}</span>
+							<span>{{review.object}}</span>
+						</div>
+						<div class="revText" layout="row">
+							<div flex=15 hide-xs><img src="img/icons/img-icons/icon-quote-left.png" alt=""></div>
+							<div flex-xs=80 flex-offset-xs="10"
+								 flex-sm=70 
+								 flex-md=70
+								 flex-gt-md=70>{{review.text}}</div>
+							<div flex=15 hide-xs><img src="img/icons/img-icons/icon-quote-right.png" alt=""></div>
+						</div>
+						<div class="revMore">
+							<a data-remodal-target="modal" href="javscript:void(0)">Подробнее</a>
+						</div>
+					</div>
+
+				</div>
+			</section>

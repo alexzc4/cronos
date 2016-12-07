@@ -12,6 +12,7 @@
     "angular-sanitize": "^1.5.9",
     "lightbox2": "^2.9.0",
     "angular-slick": "^0.2.1",
-    "angular-ui-router": "^0.3.2"
+    "angular-ui-router": "^0.3.2",
+    "remodal": "^1.1.0"
   }
 }

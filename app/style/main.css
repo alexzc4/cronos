@@ -32,6 +32,33 @@ md-menu-content .md-button.active {
     color: white !important;
 }
 
+.remodal {
+    padding: 50px 35px 35px 35px;
+}
+
+.remodal p {
+    text-align: left;
+    line-height: 1.6;
+    color: #343534;
+    font-size: 15px;
+    letter-spacing: .3px;
+}
+
+.remodal-close:before {
+    font-size: 50px;
+    color: #f8c65e;
+}
+
+.remodal-close {
+    top: 9px;
+    right: 9px;
+    left: auto;
+}
+
+.remodal-overlay {
+    background: rgba(43, 46, 56, 0.5);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -1706,3 +1733,101 @@ section.footerLight span:nth-child(2) {
 }
 
 /* ---------END PROJECT PAGE------------- */
+.reviewWrapper {
+    margin-top: 70px;
+}
+
+.reviewWrapper .revXsQuote {
+    text-align: center;
+    margin: 20px 0;
+    display: none;
+}
+
+@media (max-width: 599px) {
+    .reviewWrapper .revXsQuote {
+        display: block;
+    }
+}
+
+.reviewWrapper .revName {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 599px) {
+    .reviewWrapper .revName {
+        text-align: center;
+    }
+}
+
+.reviewWrapper .revPosition {
+    margin-bottom: 15px;
+    letter-spacing: .4px;
+}
+
+@media (max-width: 599px) {
+    .reviewWrapper .revPosition span:first-child {
+        margin-bottom: 10px;
+    }
+}
+
+.reviewWrapper .revText {
+    border-top: 1px solid #cccccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cccccc;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-size: 15px;
+}
+
+.reviewWrapper .revText div:first-child {
+    text-align: left;
+}
+
+.reviewWrapper .revText div:last-child {
+    text-align: right;
+}
+
+.reviewWrapper .revMore {
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.reviewWrapper .revMore a {
+    color: #343534;
+    text-decoration: none;
+    position: relative;
+    margin-right: 18px;
+    padding-bottom: 3px;
+}
+
+.reviewWrapper .revMore a:hover {
+    border-bottom: 1px solid #f8c65e;
+}
+
+.reviewWrapper .revMore a:before {
+    right: -25px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0px;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-left-color: #f8c65e;
+    border-width: 7px;
+    top: 46%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .reviewWrapper .revMore a:before {
+        border-width: 4px;
+        left: -13px;
+    }
+}

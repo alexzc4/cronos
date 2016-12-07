@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="vendor/angular-loading-bar/build/loading-bar.css" />
 	<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css" />
 	<link rel="stylesheet" href="vendor/lightbox2/dist/css/lightbox.css" />
+	<link rel="stylesheet" href="vendor/remodal/dist/remodal.css" />
+	<link rel="stylesheet" href="vendor/remodal/dist/remodal-default-theme.css" />
 	<!-- endbower -->
 	
 	<link rel="stylesheet" href="style/main.css">
@@ -34,6 +36,7 @@
 	<script src="vendor/lightbox2/dist/js/lightbox.js"></script>
 	<script src="vendor/angular-slick/dist/slick.js"></script>
 	<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="vendor/remodal/dist/remodal.js"></script>
 	<!-- endbower -->
 
  	<script src="js/controllers.js"></script>
@@ -43,6 +46,7 @@
 
 <body ng-controller="AppCtrl">
 
+	<div ng-include src="'pages/partials/modals.html'" ></div>
 	<div ng-include src="'pages/partials/sidenav.html'" ></div>
 
 	<md-content layout-fill>

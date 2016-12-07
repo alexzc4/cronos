@@ -1,0 +1,23 @@
+{
+    "title":  {
+        "mainTitle": "Отзывы"
+    },
+    "sliderImgList": [
+        "img/sliders/reviewsSliders/image.png",
+        "img/sliders/workSliders/projectSlider2.png"
+    ],
+    "reviewsList": [
+        {
+            "name": "Внуковский Дмитрий", 
+            "position": "Арт-директов студии Cutline",
+            "object": "Строительство офиса",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam vero sequi corporis, vitae iste esse a ratione nemo natus accusamus, assumenda impedit blanditiis, eum consequatur hic. Laboriosam voluptas aperiam consectetur."
+        }, 
+        {
+            "name": "Внуковский Дмитрий", 
+            "position": "Арт-директов студии Cutline",
+            "object": "Строительство офиса",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam vero sequi corporis, vitae iste esse a ratione nemo natus accusamus, assumenda impedit blanditiis, eum consequatur hic. Laboriosam voluptas aperiam consectetur."
+        }
+    ]
+}

@@ -73,6 +73,7 @@ md-menu-content{
 	    color: $link-footer-color;
 	    font-size: 15px;
 	    letter-spacing: .3px;
+	    @include media(xs){ font-size: 13px; }
 	}
 
 }
@@ -119,6 +120,38 @@ body{
     	background-color:white !important;
     }
 }
+
+.buttonMore{
+		margin-top: 15px;
+		text-align: right;
+		font-weight: bold;
+		a{
+			color: $link-footer-color;
+			text-decoration: none;
+			position: relative;
+			margin-right: 18px;
+			padding-bottom: 3px;
+			&:hover{
+				border-bottom: 1px solid $orange-color;
+			};
+			&:before{
+									    right: -25px;
+									    border: solid transparent;
+									    content: " ";
+									    height: 0;
+									    width: 0px;
+									    position: absolute;
+									    pointer-events: none;
+									    border-color: transparent;
+									    border-left-color: $orange-color;
+									    border-width: 7px;
+									   
+									    top: 46%;
+    									transform: translate3d(0,-50%,0);
+    									@include media(md){ border-width: 4px; left: -13px; }
+									}
+		}
+	}
 
 
 

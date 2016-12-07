@@ -44,6 +44,12 @@ md-menu-content .md-button.active {
     letter-spacing: .3px;
 }
 
+@media (max-width: 599px) {
+    .remodal p {
+        font-size: 13px;
+    }
+}
+
 .remodal-close:before {
     font-size: 50px;
     color: #f8c65e;
@@ -84,6 +90,48 @@ body {
 
 .projectButton:hover {
     background-color: white !important;
+}
+
+.buttonMore {
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.buttonMore a {
+    color: #343534;
+    text-decoration: none;
+    position: relative;
+    margin-right: 18px;
+    padding-bottom: 3px;
+}
+
+.buttonMore a:hover {
+    border-bottom: 1px solid #f8c65e;
+}
+
+.buttonMore a:before {
+    right: -25px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0px;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-left-color: #f8c65e;
+    border-width: 7px;
+    top: 46%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .buttonMore a:before {
+        border-width: 4px;
+        left: -13px;
+    }
 }
 
 .buttonWrapper {
@@ -1733,6 +1781,7 @@ section.footerLight span:nth-child(2) {
 }
 
 /* ---------END PROJECT PAGE------------- */
+/* ---------START REVIEWS PAGE------------- */
 .reviewWrapper {
     margin-top: 70px;
 }
@@ -1790,44 +1839,124 @@ section.footerLight span:nth-child(2) {
     text-align: right;
 }
 
-.reviewWrapper .revMore {
-    margin-top: 15px;
-    text-align: right;
+@media (max-width: 599px) {
+    .reviewWrapper .revText {
+        font-size: 14px;
+    }
+}
+
+/* ---------END REVIEWS PAGE------------- */
+.ServicesContent {
+    padding-top: 250px;
+    background-image: url(../img/serviceBg.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.ServicesContent .serviceWrapper {
+    padding: 30px;
+    margin-bottom: 100px;
+    background-color: white;
+}
+
+.ServicesContent .serviceWrapper .serviceTitle {
     font-weight: bold;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    line-height: 1.2;
+    min-height: 80px;
 }
 
-.reviewWrapper .revMore a {
-    color: #343534;
-    text-decoration: none;
-    position: relative;
-    margin-right: 18px;
-    padding-bottom: 3px;
+.ServicesContent .serviceWrapper .serviceTitle span {
+    word-break: break-all;
 }
 
-.reviewWrapper .revMore a:hover {
-    border-bottom: 1px solid #f8c65e;
-}
-
-.reviewWrapper .revMore a:before {
-    right: -25px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0px;
-    position: absolute;
-    pointer-events: none;
-    border-color: transparent;
-    border-left-color: #f8c65e;
-    border-width: 7px;
-    top: 46%;
-    -webkit-transform: translate3d(0, -50%, 0);
-    -moz-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0);
+@media (min-width: 600px) and (max-width: 959px) {
+    .ServicesContent .serviceWrapper .serviceTitle {
+        font-size: 16px;
+        padding-bottom: 20px;
+        min-height: 60px;
+    }
 }
 
 @media (min-width: 960px) and (max-width: 1279px) {
-    .reviewWrapper .revMore a:before {
-        border-width: 4px;
-        left: -13px;
+    .ServicesContent .serviceWrapper .serviceTitle {
+        font-size: 16px;
+    }
+}
+
+.ServicesContent .serviceWrapper .serviceTitle > div {
+    background: #f8c65e;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.ServicesContent .serviceWrapper .serviceTitle > div img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ServicesContent .serviceWrapper .serviceText {
+    margin-top: 25px;
+    line-height: 1.5;
+    font-size: 15px;
+    letter-spacing: .3px;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .ServicesContent .serviceWrapper .serviceText {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .ServicesContent .serviceWrapper .serviceText {
+        font-size: 13px;
+    }
+}
+
+.ServicesContent .serviceWrapper .buttonMore {
+    margin-top: 20px;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .ServicesContent .serviceWrapper .buttonMore a:before {
+        right: -20px;
+        left: auto;
+    }
+}
+
+@media (max-width: 599px) {
+    .ServicesContent .serviceWrapper {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .ServicesContent .serviceWrapper {
+        padding: 25px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 599px) {
+    .ServicesContent {
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .ServicesContent {
+        padding-top: 200px;
     }
 }

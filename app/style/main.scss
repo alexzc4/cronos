@@ -466,6 +466,8 @@ section.footerLight{
 /* ---------END PROJECT PAGE------------- */ 
 
 
+/* ---------START REVIEWS PAGE------------- */ 
+
 .reviewWrapper{
 	margin-top: 70px;
 	.revXsQuote{
@@ -509,36 +511,67 @@ section.footerLight{
 				text-align: right;
 			}
 		}
+		@include media(xs){ font-size: 14px; }
 	}
-	.revMore{
-		margin-top: 15px;
-		text-align: right;
-		font-weight: bold;
-		a{
-			color: $link-footer-color;
-			text-decoration: none;
-			position: relative;
-			margin-right: 18px;
-			padding-bottom: 3px;
-			&:hover{
-				border-bottom: 1px solid $orange-color;
-			};
-			&:before{
-									    right: -25px;
-									    border: solid transparent;
-									    content: " ";
-									    height: 0;
-									    width: 0px;
-									    position: absolute;
-									    pointer-events: none;
-									    border-color: transparent;
-									    border-left-color: $orange-color;
-									    border-width: 7px;
-									   
-									    top: 46%;
-    									transform: translate3d(0,-50%,0);
-    									@include media(md){ border-width: 4px; left: -13px; }
-									}
+
+}
+
+/* ---------END REVIEWS PAGE------------- */ 
+
+
+.ServicesContent{
+	padding-top: 250px;
+	    background-image: url(../img/serviceBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	.serviceWrapper{
+		padding: 30px;
+		margin-bottom: 100px;
+		background-color: white;
+		.serviceTitle{
+			font-weight: bold;
+		    padding-bottom: 30px;
+		    border-bottom: 1px solid #ccc;
+		    font-size: 20px;
+		    line-height: 1.2;
+		        min-height: 80px;
+		        span{
+		        	word-break: break-all;
+		        }
+		        @include media(sm){ font-size: 16px; padding-bottom: 20px; min-height: 60px; }
+		        @include media(md){ font-size: 16px; }
+		    > div{
+		    	background: $orange-color;
+    			border-radius: 50%;
+    			height: 40px;
+    			width: 40px;
+    			margin-right: 15px;
+    			img{
+    				max-width: 100%;
+    				max-height: 100%;
+    			}
+		    }
 		}
+		.serviceText{
+			margin-top: 25px;
+			line-height: 1.5;
+		    font-size: 15px;
+		    letter-spacing: .3px;
+		    @include media(sm){ font-size: 13px; margin-top: 20px; }
+		    @include media(md){ font-size: 13px; }
+		}
+		.buttonMore{
+			margin-top: 20px;
+			a{
+				&:before{
+					@include media(md){ right: -20px; left: auto; }
+				}
+			}
+		}
+		@include media(xs){ margin-bottom: 60px; }
+		@include media(sm){ padding: 25px; margin-bottom: 50px; }
 	}
+	@include media(xs){ padding-top: 150px; }
+	@include media(sm){ padding-top: 200px; }
 }

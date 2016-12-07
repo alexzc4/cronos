@@ -1,0 +1,29 @@
+			 
+
+			<section class="ServicesContent" layout-align="center" layout="row" >
+				<div class="container" layout-wrap
+				layout-align-xs="space-between stretch"
+				layout-align-sm="space-around stretch"
+				layout-align-md="space-between stretch"
+					layout-align-gt-md="space-between stretch" 
+					layout="row" >
+					<div class="md-whiteframe-1dp serviceWrapper" ng-repeat="service in services.serviceList"
+					flex-xs=100
+					flex-sm=40
+					flex-md=30
+					flex-gt-md=30 layout="column" layout-align="space-between stretch" >
+						<div class="serviceTitle" layout="row" layout-align="start center">
+							<div layout="row" layout-align="center center" hide-sm>
+								<img src="{{service.ico}}" alt="">
+							</div>
+							<span flex>{{service.name}}</span>
+						</div>
+						<div class="serviceText" >
+							{{service.text | limitTo:141}}
+						</div>
+						<div class="buttonMore">
+							<a data-remodal-target="modal" href="javscript:void(0)">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</section>

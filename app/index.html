@@ -23,13 +23,14 @@
 	<link rel="stylesheet" href="style/main.css">
 
 	<!-- bower:js -->
+	<script src="vendor/jquery/dist/jquery.js"></script>
 	<script src="vendor/angular/angular.js"></script>
 	<script src="vendor/angular-animate/angular-animate.js"></script>
 	<script src="vendor/angular-aria/angular-aria.js"></script>
 	<script src="vendor/angular-messages/angular-messages.js"></script>
 	<script src="vendor/angular-material/angular-material.js"></script>
 	<script src="vendor/angular-route/angular-route.js"></script>
-	<script src="vendor/jquery/dist/jquery.js"></script>
+	
 	<script src="vendor/slick-carousel/slick/slick.js"></script>
 	<script src="vendor/angular-loading-bar/build/loading-bar.js"></script>
 	<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
@@ -46,10 +47,19 @@
 
 <body ng-controller="AppCtrl">
 
-	<div ng-include src="'pages/partials/modals.html'" ></div>
+<!-- MODAL -->
+<div class="remodal md-whiteframe-3dp" id="modal_test" data-remodal-id="modal" data-remodal-options='{ "hashTracking": false }'>
+  <button data-remodal-action="close" class="remodal-close md-whiteframe-1dp"></button>
+  <p>
+   	Группой компанией КРОНОС выполнялись работы по ремонту торгового центра.<br><br>
+   	Работы были выполнены в соответствии с действующими строительными нормами и правилами, согласно техническому заданию, с надлежащим качеством и в установленный срок. При этом, в ходе производства работ максимально учитывались пожелания заказчика, использовались современные строительные материалы и прогрессивные технологии в отделке помещений.
+  </p>
+</div>
+<!--END MODAL -->
+
 	<div ng-include src="'pages/partials/sidenav.html'" ></div>
 
-	<md-content layout-fill>
+	<md-content layout-fill >
 
 		<div id="bodyContainer" layout="column" ng-cloak >
 

@@ -26,7 +26,11 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
     $scope.getClass = function (path) {
       return ($location.path().substr(0, path.length) === path) ? 'active' : '';
     }
+
   })
+
+
+
 
   cronosApp.controller('SidenavController', function ($scope, $location) 
   { 
@@ -88,6 +92,14 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
             title: 'Отзывы',
         }) 
 
+        .state('services', {
+            url: '/activities/services',
+            cache: false,
+            templateUrl: 'pages/services/services.html',
+            controller: 'servicesCtrl',
+            title: 'Услуги',
+        }) 
+
         .state('projectsD', {
             url: '/projects/{projectId}',
             templateUrl: 'pages/project-detail.html',
@@ -143,6 +155,12 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
   cronosApp.controller('reviewsCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
     $http.get('pages/reviews/reviews.json').success(function(data, status, headers, config) {
       $scope.reviews = data;
+    })
+  }]);  
+
+  cronosApp.controller('servicesCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
+    $http.get('pages/services/services.json').success(function(data, status, headers, config) {
+      $scope.services = data;
     })
   }]);  
 

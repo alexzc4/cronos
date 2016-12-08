@@ -1,46 +1,105 @@
 			 <slick infinite=true slides-to-show=1 arrows=false dots=false  slides-to-scroll=1 id="slider" 
-			 		ng-if="reviews.sliderImgList.length">
-    			<div class="item" ng-repeat="slider in reviews.sliderImgList">
+			 		ng-if="group.sliderImgList.length">
+    			<div class="item" ng-repeat="slider in group.sliderImgList">
 					<img ng-src="{{slider}}" alt="">
 				</div>
     		</slick>
 
-			<section class="content projectContent" layout-align="center" layout="row">
-				<div class="containerLight" layout-align="start stretch" layout="column">
+			<section class="content projectContent" layout-align="start center" layout="column">
+				<div class="container" layout-align="start center" layout="column">
 
-					<div class="titleLight   bg-white">
-						<h2 >{{reviews.title.mainTitle}}</h2>
-						
-						<div class="titleLogo">
-							<div class="titleLogoRound" layout="row" layout-align="center center">
-								<img src="img/icons/img-icons/icon-chat.png" alt="">
+					<div class="container">
+						<div class="statistic group" layout="row" flex=100 layout-align="space-around stretch" layout-wrap>
+							<div class="md-whiteframe-4dp" 
+							flex-xs=85 
+							flex-sm=45
+							flex-md=20
+							flex-gt-md=20  layout="column" layout-align-gt-md="start stretch" 
+							ng-repeat="foo in group.badgeList">
+		
+								<div class="statNumberWrapper">
+									{{foo.score}}
+									<span class="statLabel" ng-if="foo.badge == '1'">KM</span>
+								</div>
+								<div class="statTextWrapper" >{{foo.title}}</div>
 							</div>
 							
 						</div>
 					</div>
-					
-					<div class="reviewWrapper" layout="column" layout-align="start stretch" ng-repeat="review in reviews.reviewsList">
-						<span class="revName">{{review.name}}</span>
-						<div class="revXsQuote"><img src="img/icons/img-icons/icon-quote-left.png" alt=""></div>
-						<div layout-xs="column" layout-align-xs="start center"
-							 layout-sm="row" layout-align-sm="space-between start"
-							 layout-md="row" layout-align-md="space-between start"
-							 layout-gt-md="row" layout-align-gt-md="space-between start" class="revPosition">
-							<span>{{review.position}}</span>
-							<span>{{review.object}}</span>
-						</div>
-						<div class="revText" layout="row" layout-align="space-between start">
-							<div flex=15 hide-xs><img src="img/icons/img-icons/icon-quote-left.png" alt=""></div>
-							<div flex-xs=80 flex-offset-xs="10"
-								 flex-sm=70 
-								 flex-md=70
-								 flex-gt-md=70>{{review.text}}</div>
-							<div flex=15 hide-xs><img src="img/icons/img-icons/icon-quote-right.png" alt=""></div>
-						</div>
-						<div class="buttonMore">
-							<a data-remodal-target="modal" href="javscript:void(0)">Подробнее</a>
+
+					<div class="containerLight" layout-align="start stretch" layout="column">
+						<div class="titleLight   bg-white">
+							<h2 >{{group.title.mainTitle}}</h2>
+
+							<span class="text-left">
+								{{group.title.subTitle}}
+							</span>
+							
+							<div class="titleLogo">
+								<div class="titleLogoRound transparent" layout="row" layout-align="center center">
+									<img src="img/icons/img-icons/icon-clock.png" alt="">
+								</div>
+								
+							</div>
 						</div>
 					</div>
-
 				</div>
+
+				<section class="yellowSection" layout-align="start center" layout="column">
+					<div class="containerLight" layout-align="start stretch" layout="column">
+						<div class="yellowTitle">
+							<span>{{group.yellowTitle}}</span>
+						</div>
+						<ul>
+							<li ng-repeat="groups in group.partnersList"><span>{{groups.name}}</span></li>
+						</ul>
+					</div>
+				</section>
+					
+				<div class="container" layout-align="start center" layout="column">
+					<div class="containerLight" layout-align="start stretch" layout="column">
+						<div class="titleLight   bg-white">
+							<h2 >{{group.titleSecond.mainTitle}}</h2>
+
+							
+							
+							<div class="titleLogo">
+								<div class="titleLogoRound transparent" layout="row" layout-align="center center">
+									<img src="img/icons/img-icons/icon-round.png" alt="">
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="textBlock" layout="column" layout-align="start center" >
+
+							<div class="textCaption md-whiteframe-4dp" >
+								<div ng-bind-html="group.titleSecond.text"></div>
+							</div>
+
+						</div>
+
+						<div class="titleLight   bg-white">
+							<h2 >{{group.titleThird.mainTitle}}</h2>
+
+							
+							
+							<div class="titleLogo">
+								<div class="titleLogoRound transparent" layout="row" layout-align="center center">
+									<img src="img/icons/img-icons/icon-hire.png" alt="">
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="textBlock" layout="column" layout-align="start center" >
+
+							<div class="textCaption md-whiteframe-4dp" >
+								<div ng-bind-html="group.titleThird.text"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
 			</section>

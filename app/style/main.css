@@ -28,6 +28,10 @@ md-content.active {
     border-radius: 0;
 }
 
+.text-left {
+    text-align: left;
+}
+
 md-menu-content {
     padding: 0;
 }
@@ -767,6 +771,76 @@ body {
     margin-top: 20px;
 }
 
+.statistic.group {
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.statistic.group > div .statNumberWrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: 1px 1px 1px black;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .statistic.group > div .statNumberWrapper {
+        color: #343534;
+        text-shadow: none;
+    }
+}
+
+@media (max-width: 599px) {
+    .statistic.group > div .statNumberWrapper {
+        color: #343534;
+        text-shadow: none;
+    }
+}
+
+.statistic.group > div .statNumberWrapper .statLabel {
+    top: 15px;
+    color: white;
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .statistic.group > div .statNumberWrapper .statLabel {
+        color: #f8c65e;
+    }
+}
+
+@media (max-width: 599px) {
+    .statistic.group > div .statNumberWrapper .statLabel {
+        color: #f8c65e;
+    }
+}
+
+.statistic.group > div .statTextWrapper {
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+@media (max-width: 599px) {
+    .statistic.group > div .statTextWrapper {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .statistic.group > div .statTextWrapper {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .statistic.group > div .statTextWrapper {
+        font-size: 20px;
+    }
+}
+
 .statistic > div {
     border-top: 10px solid #f8c65e;
     text-align: center;
@@ -1049,6 +1123,10 @@ body {
     margin-top: 15px;
 }
 
+.titleLight + .textBlock {
+    margin-top: 30px;
+}
+
 .titleLight span {
     font-size: 15px;
     display: inline-block;
@@ -1092,6 +1170,10 @@ body {
     height: 100%;
     width: 60px;
     margin: 0 auto;
+}
+
+.titleLight .titleLogo .titleLogoRound.transparent {
+    background-color: transparent;
 }
 
 @media (max-width: 599px) {
@@ -1756,6 +1838,7 @@ section.footerLight span:nth-child(2) {
 @media (max-width: 599px) {
     .projectContent .container {
         padding: 0 0 20px 0;
+        width: auto;
     }
 }
 
@@ -2034,4 +2117,75 @@ section.footerLight span:nth-child(2) {
     .ServicesContent {
         padding-top: 200px;
     }
+}
+
+.yellowSection {
+    background-color: #f8c65e;
+    width: 100%;
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+@media (max-width: 599px) {
+    .yellowSection {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .yellowSection {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+}
+
+.yellowSection .yellowTitle {
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    color: #343534;
+}
+
+@media (max-width: 599px) {
+    .yellowSection .yellowTitle {
+        font-size: 13px;
+    }
+}
+
+.yellowSection ul {
+    margin-top: 30px;
+}
+
+.yellowSection ul li {
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    list-style-type: none;
+    margin-bottom: 7px;
+}
+
+@media (max-width: 599px) {
+    .yellowSection ul li {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    .yellowSection ul li {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .yellowSection ul li {
+        font-size: 19px;
+    }
+}
+
+.yellowSection ul li:last-child {
+    margin-bottom: 0px;
 }

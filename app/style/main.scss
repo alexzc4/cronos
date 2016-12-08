@@ -389,7 +389,7 @@ section.footerLight{
 	.container{
 		@include media(md){ padding: 0 0 20px 0; }
 		@include media(sm){ padding: 0 0 20px 0; }
-		@include media(xs){ padding: 0 0 20px 0; }
+		@include media(xs){ padding: 0 0 20px 0; width: auto; }
 	}
 }
 
@@ -575,4 +575,43 @@ section.footerLight{
 	}
 	@include media(xs){ padding-top: 150px; }
 	@include media(sm){ padding-top: 200px; }
+}
+
+
+
+
+
+.yellowSection{
+	background-color: $orange-color;
+	width: 100%;
+	margin-top: 60px;
+	padding: 40px 0;
+	@include media(xs){ margin-top: 20px; margin-bottom: 50px; }
+	@include media(sm){ margin-top: 30px; margin-bottom: 60px; }
+	.yellowTitle{
+		line-height: 1.5;
+		font-weight: bold;
+	    font-size: 14px;
+	    text-align: center;
+	    width: 80%;
+	    margin-left: 10%;
+	    color:$link-footer-color;
+	    @include media (xs){ font-size: 13px; }
+	}
+	ul{
+		margin-top: 30px;
+		li{
+		    text-align: center;
+		    font-size: 23px;
+		    color: white;
+		    list-style-type: none;
+		    margin-bottom: 7px;
+		    @include media (xs){ font-size: 15px; }
+		    @include media (sm){ font-size: 17px; }
+		    @include media (md){ font-size: 19px; }
+		    &:last-child{
+		    	margin-bottom:0px;
+		    };
+		}
+	}
 }

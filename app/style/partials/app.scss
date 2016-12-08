@@ -57,6 +57,10 @@ md-content{
 	border-radius: 0;
 }
 
+.text-left{
+	text-align: left;
+}
+
 md-menu-content{
 	padding: 0;
 	
@@ -186,6 +190,7 @@ body{
 	margin-right: 15px;
 	width: 100%;
 	box-sizing: border-box;
+
 }
 
 .containerLight{
@@ -520,6 +525,37 @@ body{
 	width: 100%;
 	margin-bottom: 70px;
 	margin-top: 20px;
+	&.group{
+		margin-top: 12px;
+		margin-bottom: 0px;
+		>  div{
+			.statNumberWrapper{
+				background-color: rgba(255, 255, 255, 0.6);
+				color: white;
+				    padding-top: 15px;
+    			padding-bottom: 15px;
+    			margin-bottom: 0px;
+    			margin-top: 0px;
+    			    text-shadow: 1px 1px 1px black;
+    			    @include media(sm){ color: $link-footer-color; text-shadow: none }
+    			    @include media(xs){ color: $link-footer-color; text-shadow: none}
+    			.statLabel{
+    				top:15px;
+    				color: white;
+    				@include media(sm){ color: $orange-color;  }
+    			    @include media(xs){ color: $orange-color; }
+    			}
+			}
+			.statTextWrapper{
+				font-size: 26px;
+				text-transform: uppercase;
+    			    padding: 20px;
+    			    		    @include media(xs){ font-size: 20px;  }
+		    @include media(sm){ font-size: 20px;  }
+		    @include media(md){ font-size: 20px;  }
+			}
+		}
+	}
 	> div{
 		border-top: 10px solid $orange-color;
 		text-align: center;
@@ -562,6 +598,7 @@ body{
 	@include media(xs){ margin-bottom: 40px;  }
 	@include media(sm){ margin-bottom: 40px;  }
 	@include media(md){ margin-bottom: 40px;  }
+
 }
 
 .parTitle{
@@ -685,6 +722,10 @@ body{
 		margin-top: 15px;
 	}
 
+	&+.textBlock{
+		margin-top: 30px;
+	}
+
 	text-align: center;
 	border:4px solid $orange-color;
 	color: $link-footer-color;
@@ -721,6 +762,9 @@ body{
     		height: 100%;
 		    width: 60px;
 		    margin: 0 auto;
+		    &.transparent{
+		    	background-color: transparent;
+		    }
 		    @include media(xs){ padding:8px; width: 40px; }
     	}
     	@include media(xs){ bottom:-20px; height:40px; width:60px; }

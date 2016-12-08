@@ -179,7 +179,7 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
 
   cronosApp.controller('groupCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
     $http.get('pages/group/group.json').success(function(data, status, headers, config) {
-      $scope.reviews = data;
+      $scope.group = data;
     })
   }]);  
 

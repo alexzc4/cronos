@@ -711,64 +711,37 @@ body {
 #slider .item {
     text-align: center;
     position: relative;
+    height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #slider .item {
+        height: 560px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    #slider .item {
+        height: 460px;
+    }
+}
+
+@media (max-width: 599px) {
+    #slider .item {
+        height: auto;
+    }
 }
 
 #slider .item:before {
     content: '';
     display: block;
-    padding-top: 80%;
-}
-
-@media (min-width: 600px) and (max-width: 959px) {
-    #slider .item:before {
-        padding-top: 50%;
-    }
-}
-
-@media (min-width: 960px) and (max-width: 1279px) {
-    #slider .item:before {
-        padding-top: 0px;
-    }
-}
-
-@media (min-width: 1280px) {
-    #slider .item:before {
-        padding-top: 0px;
-    }
-}
-
-#slider .item img {
-    height: 750px;
-    display: inline-block;
-    min-width: 100%;
-}
-
-@media (min-width: 600px) and (max-width: 959px) {
-    #slider .item img {
-        height: 100%;
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0;
-        bottom: 0;
-    }
-}
-
-@media (min-width: 960px) and (max-width: 1279px) {
-    #slider .item img {
-        height: 560px;
-    }
-}
-
-@media (max-width: 599px) {
-    #slider .item img {
-        height: 100%;
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0;
-        bottom: 0;
-    }
+    padding-top: 100%;
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
@@ -1217,6 +1190,11 @@ body {
 
 .titleLight .titleLogo .titleLogoRound.transparent {
     background-color: transparent;
+}
+
+.titleLight .titleLogo .titleLogoRound img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 @media (max-width: 599px) {
@@ -1881,7 +1859,6 @@ section.footerLight span:nth-child(2) {
 @media (max-width: 599px) {
     .projectContent .container {
         padding: 0 0 20px 0;
-        width: auto;
     }
 }
 
@@ -2231,4 +2208,220 @@ section.footerLight span:nth-child(2) {
 
 .yellowSection ul li:last-child {
     margin-bottom: 0px;
+}
+
+.groupTimeline {
+    list-style: none;
+    padding: 70px 0 0px;
+    position: relative;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.groupTimeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 1px;
+    background-color: #dedede;
+    left: 50%;
+    margin-left: -0.5px;
+}
+
+.groupTimeline > li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.groupTimeline > li:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.groupTimeline > li:before {
+    content: " ";
+    display: table;
+}
+
+.groupTimeline > li .timeline-panel {
+    width: 36%;
+    float: left;
+    position: relative;
+}
+
+.groupTimeline > li .timeline-panel .groupLineImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.groupTimeline > li .timeline-panel .groupLineImg:before {
+    content: '';
+    padding-top: 100%;
+    display: block;
+}
+
+.groupTimeline > li .timeline-panel .groupLineText {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: .3px;
+    line-height: 1.5;
+    color: #343534;
+}
+
+.groupTimeline > li .timeline-panel .groupLineText span {
+    word-break: break-all;
+    word-break: break-word;
+}
+
+.groupTimeline > li .timeline-panel:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
+.groupTimeline > li .timeline-panel:after {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+}
+
+.groupTimeline > li .timeline-badge {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    left: 50%;
+    margin-left: -25px;
+    background-color: white;
+    z-index: 100;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.groupTimeline > li .timeline-badge .timelineArrowWrapper {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #dedede;
+    font-size: 7px;
+    color: #f8c65e;
+}
+
+.groupTimeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+
+.groupTimeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+.groupTimeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+
+@media (max-width: 599px) {
+    .groupTimeline > li.timeline-inverted > .timeline-panel {
+        float: left;
+    }
+}
+
+.contactsButtonWrapper {
+    margin-top: 35px;
+}
+
+.contactsModalWrapper {
+    margin-top: 20px;
+}
+
+.contactsModalWrapper .projectButton {
+    border: 3px solid white;
+    color: white;
+}
+
+.contactsModalWrapper .projectButton:hover {
+    background-color: #f8c65e !important;
+    -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+
+#modalContacts {
+    background-color: #f8c65e;
+    max-width: 560px;
+    padding: 60px;
+}
+
+#modalContacts .remodal-close:before {
+    color: white;
+}
+
+#modalContacts form input {
+    margin-bottom: 15px;
+    border: 0px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#modalContacts form textarea {
+    border: 0px;
+    text-align: center;
+    padding: 20px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+    color: #343534;
+}
+
+::-moz-placeholder {
+    color: #343534;
+}
+
+:-moz-placeholder {
+    color: #343534;
+}
+
+:-ms-input-placeholder {
+    color: #343534;
 }

@@ -1,7 +1,6 @@
 			 <slick infinite=true slides-to-show=1 arrows=false dots=false  slides-to-scroll=1 id="slider" 
 			 		ng-if="communication.sliderImgList.length">
-    			<div class="item" ng-repeat="slider in communication.sliderImgList">
-					<img ng-src="{{slider}}" alt="">
+    			<div class="item" ng-repeat="slider in communication.sliderImgList" style="background-image:url('{{slider}}')">
 				</div>
     		</slick>
 

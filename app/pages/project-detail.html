@@ -1,7 +1,7 @@
 			 <slick infinite=true slides-to-show=1 slides-to-scroll=1 arrows=false dots=false id="slider" 
 			 		ng-if="project.sliderImgList.length">
-    			<div class="item" ng-repeat="slider in project.sliderImgList">
-					<img ng-src="{{slider}}" alt="">
+    			<div class="item" ng-repeat="slider in project.sliderImgList" style="background-image:url('{{slider}}')">
+					
 				</div>
     		</slick>
 			<section class="content projectContent" layout-align="center" layout="row">

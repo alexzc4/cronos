@@ -1,11 +1,10 @@
 			 <slick infinite=true slides-to-show=1 arrows=false dots=false  slides-to-scroll=1 id="slider" 
 			 		ng-if="group.sliderImgList.length">
-    			<div class="item" ng-repeat="slider in group.sliderImgList">
-					<img ng-src="{{slider}}" alt="">
+    			<div class="item" ng-repeat="slider in group.sliderImgList" style="background-image:url('{{slider}}')">
 				</div>
     		</slick>
 
-			<section class="content projectContent" layout-align="start center" layout="column">
+			<section class="content projectContent" layout-align="center" layout="row">
 				<div class="container" layout-align="start center" layout="column">
 
 					<div class="container">
@@ -44,6 +43,84 @@
 						</div>
 					</div>
 				</div>
+				</section>
+
+				<section class=" projectContent" layout-align="center" layout="row">
+					<div class="container" layout-align="start center" layout="column">
+
+					    <ul class="groupTimeline">
+
+					        <li>
+						          <div class="timeline-badge" layout="row" layout-align="center center">
+						          	<div class="timelineArrowWrapper" layout="row" layout-align="center center">
+						          		<i class="icon-arrow-down"></i>
+						          	</div>
+						          </div>
+
+						          <div class="timeline-panel md-whiteframe-1dp" layout="row" layout-align="start stretch">
+						            <div class="groupLineImg" style="background-image:url('img/groupTimeline/image1.png')" flex=50></div>
+						            <div class="groupLineText" flex=50 layout="row" layout-align="center center">
+						            	<span>Главная ценность Компании - это коллектив, состоящий высококвалифицированных специалистов в разных облсатях, успешно работающих.
+						            	</span>
+						            </div>
+						          </div>
+					        </li>
+
+					        <li class="timeline-inverted">
+						          <div class="timeline-badge" layout="row" layout-align="center center">
+						          	<div class="timelineArrowWrapper" layout="row" layout-align="center center">
+						          		<i class="icon-arrow-down"></i>
+						          	</div>
+						          </div>
+
+						          <div class="timeline-panel md-whiteframe-1dp" layout="row" layout-align="start stretch">
+						          	
+						            <div class="groupLineText" flex=50 layout="row" layout-align="center center">
+						            	<span>Главная ценность Компании - это коллектив, состоящий высококвалифицированных специалистов в разных облсатях, успешно работающих.
+						            	</span>
+						            </div>
+						            <div class="groupLineImg" style="background-image:url('img/groupTimeline/image2.png')" flex=50></div>
+						          </div>
+					        </li>
+
+					        <li>
+						          <div class="timeline-badge" layout="row" layout-align="center center">
+						          	<div class="timelineArrowWrapper" layout="row" layout-align="center center">
+						          		<i class="icon-arrow-down"></i>
+						          	</div>
+						          </div>
+
+						          <div class="timeline-panel md-whiteframe-1dp" layout="row" layout-align="start stretch">
+						            <div class="groupLineImg" style="background-image:url('img/groupTimeline/image3.png')" flex=50></div>
+						            <div class="groupLineText" flex=50 layout="row" layout-align="center center">
+						            	<span>Главная ценность Компании - это коллектив, состоящий высококвалифицированных специалистов в разных облсатях, успешно работающих.
+						            	</span>
+						            </div>
+						          </div>
+					        </li>
+
+					        <li class="timeline-inverted">
+						          <div class="timeline-badge" layout="row" layout-align="center center">
+						          	<div class="timelineArrowWrapper" layout="row" layout-align="center center">
+						          		<i class="icon-arrow-down"></i>
+						          	</div>
+						          </div>
+
+						          <div class="timeline-panel md-whiteframe-1dp" layout="row" layout-align="start stretch">
+						          	
+						            <div class="groupLineText" flex=50 layout="row" layout-align="center center">
+						            	<span>Главная ценность Компании - это коллектив, состоящий высококвалифицированных специалистов в разных облсатях, успешно работающих.
+						            	</span>
+						            </div>
+						            <div class="groupLineImg" style="background-image:url('img/groupTimeline/image4.png')" flex=50></div>
+						          </div>
+					        </li>
+
+					    </ul>
+
+					</div>
+
+				</section>
 
 				<section class="yellowSection" layout-align="start center" layout="column">
 					<div class="containerLight" layout-align="start stretch" layout="column">
@@ -55,7 +132,8 @@
 						</ul>
 					</div>
 				</section>
-					
+
+				<section class=" projectContent" layout-align="center" layout="row">
 				<div class="container" layout-align="start center" layout="column">
 					<div class="containerLight" layout-align="start stretch" layout="column">
 						<div class="titleLight   bg-white">
@@ -96,6 +174,9 @@
 
 							<div class="textCaption md-whiteframe-4dp" >
 								<div ng-bind-html="group.titleThird.text"></div>
+								<div class="contactsButtonWrapper buttonWrapper">
+									<md-button data-remodal-target="modalContacts" href="javscript:void(0)" md-no-ink class="projectButton" >Отправить резюме</md-button>
+								</div>
 							</div>
 
 						</div>

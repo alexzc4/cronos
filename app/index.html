@@ -48,7 +48,7 @@
 <body ng-controller="AppCtrl">
 
 	<!-- MODAL -->
-	<div class="remodal md-whiteframe-3dp" id="modal_test" data-remodal-id="modal" data-remodal-options='{ "hashTracking": false }'>
+	<div class="remodal md-whiteframe-3dp" id="modalSimple" data-remodal-id="modal" data-remodal-options='{ "hashTracking": false }'>
 	  <button data-remodal-action="close" class="remodal-close md-whiteframe-1dp"></button>
 	  <p>
 	   	Группой компанией КРОНОС выполнялись работы по ремонту торгового центра.<br><br>
@@ -56,6 +56,26 @@
 	  </p>
 	</div>
 	<!--END MODAL -->
+
+	<!-- MODAL CONTACTS-->
+	<div class="remodal md-whiteframe-3dp" id="modalContacts" data-remodal-id="modalContacts" data-remodal-options='{ "hashTracking": false }'>
+	  <button data-remodal-action="close" class="remodal-close"></button>
+	  <form action="" layout="column" layout-aligment="start stretch">
+	  	<input type="text" placeholder="Имя">
+	  	<input type="text" placeholder="Фамилия">
+	  	<input type="text" placeholder="Телефон">
+	  	<input type="text" placeholder="Email">
+	  	<textarea name="" id="" cols="30" rows="7" placeholder="Сообщение"></textarea>
+	  	<div class="atFile">
+	  		<button></button>
+	  		<input type="text" disabled="disables" value="Резюме.pdf">
+	  	</div>
+	  	<div class="contactsModalWrapper buttonWrapper">
+			<md-button  href="javscript:void(0)" md-no-ink class="projectButton" >Отправить резюме</md-button>
+		</div>
+	  </form>
+	</div>
+	<!--END MODAL CONTACTS-->
 
 	<div ng-include src="'pages/partials/sidenav.html'" ></div>
 

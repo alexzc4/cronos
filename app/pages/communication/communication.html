@@ -64,8 +64,11 @@
 							flex-md=20
 							flex-gt-md=20  layout="column" layout-align-gt-md="start stretch" 
 							ng-repeat="foo in communication.badgeList">
-
-								<div class="statNumberWrapper">{{foo.score}}</div>
+		
+								<div class="statNumberWrapper">
+									{{foo.score}}
+									<span class="statLabel">KM</span>
+								</div>
 								<div class="statTextWrapper" >{{foo.title}}</div>
 							</div>
 							

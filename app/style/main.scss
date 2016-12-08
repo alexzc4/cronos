@@ -402,9 +402,12 @@ section.footerLight{
 	> div{
 		text-transform: uppercase;
 		margin-top: 40px;
+		@include media(sm){ margin-bottom: 30px; }
+		@include media(xs){ margin-bottom: 30px; }
 		div{
 			margin-top: 5px;
 			margin-bottom: 5px;
+			@include media(xs){ font-size: 13px; }
 		}
 	}
 	span{

@@ -52,8 +52,12 @@
 
 					<div class=" workPartners containerPadding" layout="column" layout-align="start stretch" >
 						<span><b>Наши партнеры, которые разделяют наше видение партнерских отношений и способы совместно решать клиентов из разных сфер бизнеса</b></span>
-						<div layout="row" layout-wrap>
-							<div flex-gt-md=45 flex-md=45 flex-sm=45 flex-xs=100 ng-repeat="partner in work.partners">{{partner}}</div>
+						<div layout="row" layout-wrap layout-align="start center">
+							<div 
+								flex-gt-md=45 
+								flex-md=45 
+								flex-sm=45 
+								flex-xs=50 ng-repeat="partner in work.partners">{{partner}}</div>
 						</div>
 					</div>
 					
@@ -68,8 +72,8 @@
 		
 					<div class="workLink  containerPadding" layout="column" layout-align="start stretch">
 						<a href="{{site.link}}" target="_blank" ng-repeat="site in work.links" layout="row" layout-align="start start">
-							<img src="img/icons/img-icons/icon-pdf.png" alt="">
-							<span>{{site.name}}</span>
+							<img src="img/icons/img-icons/icon-pdf.png" alt="" hide-xs>
+							<span flex>{{site.name}}</span>
 						</a>
 					</div>
 

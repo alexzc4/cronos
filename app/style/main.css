@@ -780,6 +780,15 @@ body {
     margin-bottom: 15px;
     color: #343534;
     background-color: white;
+    position: relative;
+}
+
+.statistic > div .statNumberWrapper .statLabel {
+    position: absolute;
+    font-size: 18px;
+    color: #f8c65e;
+    right: 20px;
+    top: 0px;
 }
 
 @media (max-width: 599px) {
@@ -1757,9 +1766,27 @@ section.footerLight span:nth-child(2) {
     margin-top: 40px;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+    .workPartners > div {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 599px) {
+    .workPartners > div {
+        margin-bottom: 30px;
+    }
+}
+
 .workPartners > div div {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+@media (max-width: 599px) {
+    .workPartners > div div {
+        font-size: 13px;
+    }
 }
 
 .workPartners span {

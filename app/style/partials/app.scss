@@ -531,6 +531,14 @@ body{
 			margin-bottom: 15px;
 			color: $link-footer-color;
 			background-color: white;
+			position: relative;
+			.statLabel{
+				position: absolute;
+			    font-size: 18px;
+			    color: #f8c65e;
+			    right: 20px;
+			    top: 0px;
+			}
 			@include media(xs){ font-size: 45px; }
 			@include media(sm){ font-size: 45px; margin-bottom: 10px; margin-top: 10px;  }
 			@include media(md){ font-size: 45px; margin-bottom: 10px; margin-top: 10px;  }

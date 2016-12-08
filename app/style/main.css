@@ -580,6 +580,20 @@ body {
     margin-top: 30px;
 }
 
+@media (max-width: 599px) {
+    #header .langToggler md-fab-speed-dial {
+        margin-top: 110px;
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+    #header .langToggler md-fab-speed-dial {
+        margin-top: 105px;
+        margin-right: 20px;
+    }
+}
+
 @media (min-width: 960px) and (max-width: 1279px) {
     #header .langToggler md-fab-speed-dial {
         margin-top: 20px;
@@ -2218,6 +2232,12 @@ section.footerLight span:nth-child(2) {
     margin-top: 30px;
 }
 
+@media (min-width: 960px) and (max-width: 1279px) {
+    .groupTimeline {
+        width: 85%;
+    }
+}
+
 .groupTimeline:before {
     top: 0;
     bottom: 0;
@@ -2249,6 +2269,12 @@ section.footerLight span:nth-child(2) {
     width: 36%;
     float: left;
     position: relative;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    .groupTimeline > li .timeline-panel {
+        width: 45%;
+    }
 }
 
 .groupTimeline > li .timeline-panel .groupLineImg {
@@ -2369,7 +2395,7 @@ section.footerLight span:nth-child(2) {
 }
 
 .contactsModalWrapper {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .contactsModalWrapper .projectButton {
@@ -2382,6 +2408,15 @@ section.footerLight span:nth-child(2) {
     -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+
+.contactsModalWrapperFile a {
+    border: 2px solid white;
+    color: white;
+}
+
+.contactsModalWrapperFile a:hover {
+    background-color: #f8c65e !important;
 }
 
 #modalContacts {
@@ -2408,6 +2443,26 @@ section.footerLight span:nth-child(2) {
     padding: 20px;
     resize: vertical;
     font-size: 14px;
+}
+
+#modalContacts form .atFile {
+    margin-top: 30px;
+}
+
+#modalContacts form .atFile input {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 599px) {
+    #modalContacts form .atFile input {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 599px) {
+    #modalContacts {
+        padding: 45px;
+    }
 }
 
 ::-webkit-input-placeholder {

@@ -418,7 +418,9 @@ body{
 	.langToggler{
 		md-fab-speed-dial{
 			margin-top: 30px;
-			@include media(md){     margin-top: 20px; }
+			@include media(xs){ margin-top: 110px; margin-right: 0px; }
+			@include media(sm){ margin-top: 105px; margin-right: 20px; }
+			@include media(md){ margin-top: 20px; }
 			.md-button{
 			    min-height: 10px;
 			    line-height: 30px;

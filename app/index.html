@@ -66,10 +66,18 @@
 	  	<input type="text" placeholder="Телефон">
 	  	<input type="text" placeholder="Email">
 	  	<textarea name="" id="" cols="30" rows="7" placeholder="Сообщение"></textarea>
-	  	<div class="atFile">
-	  		<button></button>
-	  		<input type="text" disabled="disables" value="Резюме.pdf">
+
+	  	<div class="atFile" 
+	  	layout-xs="column" layout-align-xs="start stretch"
+	  	layout-sm="row" layout-align-sm="space-between stretch"
+	  	layout-md="row" layout-align-md="space-between stretch"
+	  	layout-gt-md="row" layout-align-gt-md="space-between stretch">
+	  		<div class="contactsModalWrapperFile buttonWrapper">
+									<md-button data-remodal-target="modalContacts" href="javscript:void(0)" md-no-ink class="projectButton" >Прикрепить файл</md-button>
+								</div>
+	  		<div><input type="text" disabled="disables" value="Резюме.pdf"></div>
 	  	</div>
+
 	  	<div class="contactsModalWrapper buttonWrapper">
 			<md-button  href="javscript:void(0)" md-no-ink class="projectButton" >Отправить резюме</md-button>
 		</div>

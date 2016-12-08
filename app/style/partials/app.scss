@@ -45,6 +45,12 @@ $main-font: 'Open Sans', sans-serif;
 
 md-content{
 	background-color: white;
+	&.active{
+			    background-image: url(../img/serviceBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	}
 }
 
 .md-button .md-ripple-container{
@@ -208,6 +214,9 @@ body{
     box-sizing: border-box;
     margin-bottom: 100px;
     position: relative;
+    &.active{
+    	min-height: calc(100% - 166px);
+    }
 }
 
 #footer {

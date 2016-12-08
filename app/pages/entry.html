@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
 
-	<meta charset="UTF-8">
-	<title>КРОНОС</title>
-	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=.5, user-scalable=no">
-	 <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-
-	
-
-	<!-- bower:css -->
-	<link rel="stylesheet" href="../vendor/angular-material/angular-material.css" />
-	
-	<link rel="stylesheet" href="../vendor/normalize-css/normalize.css" />
-	<link rel="stylesheet" href="../vendor/slick-carousel/slick/slick.css" />
-	<!-- endbower -->
-
-	<link rel="stylesheet" href="style/main.css">
-
-	<!-- bower:js -->
-	<script src="../vendor/angular/angular.js"></script>
-	<script src="../vendor/angular-animate/angular-animate.js"></script>
-	<script src="../vendor/angular-aria/angular-aria.js"></script>
-	<script src="../vendor/angular-messages/angular-messages.js"></script>
-	<script src="../vendor/angular-material/angular-material.js"></script>
-	<script src="../vendor/angular-route/angular-route.js"></script>
-	<script src="../vendor/jquery/dist/jquery.js"></script>
-	
-	<script src="../vendor/slick-carousel/slick/slick.js"></script>
-	<!-- endbower -->
-	
-
- 	<script src="js/app.js"></script>
-    <script src="js/controller/controllers.js"></script>
-
-</head>
-
-<body ng-app="BlankApp" >
-
-	<md-content layout-fill>
-
-		<div id="bodyContainer" layout="row" ng-cloak layout-align="center center">
+		<div  layout="row" ng-cloak layout-align="center center">
 
 				<section class="topYellow"></section>
 
@@ -72,7 +29,7 @@
 									Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности
 								</span>
 								<div>
-									<a href="javascript:void(0)" class="entryLink">Открыть сайт</a>
+									<a ui-sref="communication" ui-sref-opts="{ reload: true }" class="entryLink">Открыть сайт</a>
 								</div>
 							</div>
 							
@@ -96,7 +53,7 @@
 									Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности
 								</span>
 								<div>
-									<a href="javascript:void(0)" class="entryLink">Открыть сайт</a>
+									<a ui-sref="communication" ui-sref-opts="{ reload: true }" class="entryLink">Открыть сайт</a>
 								</div>
 							</div>
 
@@ -106,27 +63,6 @@
 				</div>
 		</div>
 
-		<section class="footerLight" layout="row" layout-align="center">
 
-			<div class="container" 
-				layout-xs="column" layout-align-xs="space-between center"
-				layout-sm="row" layout-align-sm="space-between center"
-				layout-md="row" layout-align-md="space-between center"
-				layout-gt-md="row" layout-align-gt-md="space-between center">
 
-				<span flex-md="40" flex-offset-md="5" 
-					  flex-sm="40" flex-offset-sm="5" 
-					  flex-gt-md="50" >Будущее основывается в настоящем.</span>
-
-				<span flex-md="40" flex-offset-md="10" 
-					  flex-sm="45" flex-offset-sm="5"
-					  flex-gt-md="50" >© 2016 KRONOS GROUP. All Rights Reserved.</span>
-				<span flex></span>
-			</div>
-
-		</section>
-
-	</md-content>
-
-</body>
-</html>
+	

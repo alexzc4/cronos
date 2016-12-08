@@ -12,6 +12,16 @@ md-content {
     background-color: white;
 }
 
+md-content.active {
+    background-image: url(../img/serviceBg.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
 .md-button .md-ripple-container {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -215,6 +225,12 @@ body {
     box-sizing: border-box;
     margin-bottom: 100px;
     position: relative;
+}
+
+#bodyContainer.active {
+    min-height: -webkit-calc(100% - 166px);
+    min-height: -moz-calc(100% - 166px);
+    min-height: calc(100% - 166px);
 }
 
 #footer {
@@ -1848,13 +1864,6 @@ section.footerLight span:nth-child(2) {
 /* ---------END REVIEWS PAGE------------- */
 .ServicesContent {
     padding-top: 250px;
-    background-image: url(../img/serviceBg.png);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
 }
 
 .ServicesContent .serviceWrapper {

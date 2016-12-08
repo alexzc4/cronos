@@ -1,9 +1,10 @@
 
 var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute','slick','angular-loading-bar','ngAnimate','cfp.loadingBar','ngSanitize','ui.router'])
 
-  cronosApp.controller('AppCtrl', function ($scope, $timeout, $mdSidenav) {
+  cronosApp.controller('AppCtrl', function ($scope,$state, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
+    $scope.$state = $state;
 
     function buildToggler(componentId) {
       return function() {
@@ -115,7 +116,15 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
                 });
 
             }
-        })   
+        })
+
+        .state("otherwise", {
+            url: "/",
+            title: 'Главная страница',
+            templateUrl: "pages/entry.html"
+        });
+
+        $urlRouterProvider.otherwise('/');
   });
 
 
@@ -124,6 +133,8 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
         $rootScope.pageTitle = toState.title;
     });
 });
+
+  
 
   cronosApp.controller('contactsCtrl', function ($scope, $templateCache) {
     $templateCache.removeAll();

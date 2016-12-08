@@ -1,5 +1,5 @@
-<section id="footer" ng-controller="FooterController">
-			<div class="footerUp" layout="row" layout-align="center">
+<section id="footer" ng-controller="FooterController" ng-show="!$state.includes('otherwise')">
+			<div class="footerUp" layout="row" layout-align="center" ng-show="!$state.includes('services')">
 
 				<div class="container" 
 					layout-sm="row" layout-align-sm="center center"

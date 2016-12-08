@@ -101,6 +101,14 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
             title: 'Услуги',
         }) 
 
+        .state('group', {
+            url: '/group',
+            cache: false,
+            templateUrl: 'pages/group/group.html',
+            controller: 'groupCtrl',
+            title: 'Группы компании',
+        }) 
+
         .state('projectsD', {
             url: '/projects/{projectId}',
             templateUrl: 'pages/project-detail.html',
@@ -165,6 +173,12 @@ var cronosApp = angular.module('cronosApp', ['ngMaterial','ngAnimate','ngRoute',
 
   cronosApp.controller('reviewsCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
     $http.get('pages/reviews/reviews.json').success(function(data, status, headers, config) {
+      $scope.reviews = data;
+    })
+  }]);  
+
+  cronosApp.controller('groupCtrl',['$scope','$http', '$location', function($scope, $http, $location) {
+    $http.get('pages/group/group.json').success(function(data, status, headers, config) {
       $scope.reviews = data;
     })
   }]);  

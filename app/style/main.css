@@ -114,10 +114,14 @@ body {
     position: relative;
     margin-right: 18px;
     padding-bottom: 3px;
+    display: inline-block;
+    float: right;
 }
 
 .buttonMore a:hover {
-    border-bottom: 1px solid #f8c65e;
+    -webkit-box-shadow: 0px 1px 0px 0px #f8c65e;
+    -moz-box-shadow: 0px 1px 0px 0px #f8c65e;
+    box-shadow: 0px 1px 0px 0px #f8c65e;
 }
 
 .buttonMore a:before {
@@ -203,6 +207,7 @@ body {
     width: 1px;
     background-color: #dedede;
     height: 70px;
+    min-height: 70px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -210,6 +215,7 @@ body {
 @media (max-width: 599px) {
     .divider {
         height: 60px;
+        min-height: 60px;
         margin-top: 10px;
         margin-bottom: 25px;
     }
@@ -368,6 +374,16 @@ body {
     right: 0;
 }
 
+#header .headerMenu > ul {
+    height: 100px;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #header .headerMenu > ul {
+        height: 80px;
+    }
+}
+
 #header .headerMenu ul {
     margin: 0;
     padding: 0;
@@ -398,6 +414,8 @@ body {
     transition: all .1s linear;
     line-height: 18px;
     cursor: pointer;
+    min-width: 100%;
+    display: block;
 }
 
 #header .headerMenu ul li a:hover {
@@ -424,12 +442,28 @@ body {
     transform: translate3d(0px, 19px, 0px);
 }
 
+@media (min-width: 960px) and (max-width: 1279px) {
+    #header .headerMenu ul li a.active {
+        -webkit-transform: translate3d(0px, 17px, 0px);
+        -moz-transform: translate3d(0px, 17px, 0px);
+        transform: translate3d(0px, 17px, 0px);
+    }
+}
+
 #header .headerMenu ul li.linked:hover ul {
     visibility: visible;
     opacity: 1;
     -webkit-transform: translate3d(0px, 19px, 0px);
     -moz-transform: translate3d(0px, 19px, 0px);
     transform: translate3d(0px, 19px, 0px);
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #header .headerMenu ul li.linked:hover ul {
+        -webkit-transform: translate3d(0px, 17px, 0px);
+        -moz-transform: translate3d(0px, 17px, 0px);
+        transform: translate3d(0px, 17px, 0px);
+    }
 }
 
 #header .headerMenu ul li.linked ul {
@@ -465,9 +499,13 @@ body {
 #header .headerMenu ul li.linked ul li a {
     width: 100%;
     padding: 0;
+    display: block;
     background-color: transparent;
     font-weight: normal;
     font-size: 14px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
 }
 
 @media (min-width: 960px) and (max-width: 1279px) {
@@ -1589,6 +1627,7 @@ section.footerLight span:nth-child(2) {
 
 .projectsWrapper .projectsBox > div {
     margin-bottom: 50px;
+    display: block;
     position: relative;
 }
 

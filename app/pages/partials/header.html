@@ -18,7 +18,7 @@
 						flex-gt-md=60 flex-offset-gt-md=10 hide-sm>
 
 						<ul layout="row" layout-align="space-between center" layout-fill>
-							<li><a   layout-fill layout="row" layout-align="center center"><span >Группа компании</span></a></li>
+							<li><a ng-class="getClass('/group')" ui-sref="group" ui-sref-opts="{ reload: true }" layout-fill layout="row" layout-align="center center"><span >Группа компании</span></a></li>
 							<li class="linked" layout="column" layout-align="start stretch">
 								<a  ng-class="getClass('/activities')"  layout-fill layout="row" layout-align="center center">
 									<span >Виды деятельности</span>

@@ -9,7 +9,7 @@
 		
 		<md-content layout-align="center center" layout-fill layout="row" >
 	        <ul layout="column" layout-align="stretch" ng-controller="SidenavController">
-								<li><a href="javscript:void(0)" layout-fill>Группа компании</a></li>
+								<li><a ng-click="toggleLeft()" ng-class="getClass('/group')" ui-sref="group" ui-sref-opts="{ reload: true }" layout-fill>Группа компании</a></li>
 								
 								<md-menu>
 						          

@@ -407,6 +407,14 @@ body {
     transform: translate3d(0px, 19px, 0px);
 }
 
+@media (min-width: 960px) and (max-width: 1279px) {
+    #header .headerMenu ul li:hover a {
+        -webkit-transform: translate3d(0px, 17px, 0px);
+        -moz-transform: translate3d(0px, 17px, 0px);
+        transform: translate3d(0px, 17px, 0px);
+    }
+}
+
 #header .headerMenu ul li a {
     text-decoration: none;
     color: #343534;
@@ -565,6 +573,41 @@ body {
 @media (max-width: 599px) {
     #header .headerMenu ul {
         display: none;
+    }
+}
+
+#header .langToggler md-fab-speed-dial {
+    margin-top: 30px;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #header .langToggler md-fab-speed-dial {
+        margin-top: 20px;
+    }
+}
+
+#header .langToggler md-fab-speed-dial .md-button {
+    min-height: 10px;
+    line-height: 30px;
+    min-width: 40px;
+    padding: 5px;
+    margin: 0;
+    color: #f8c65e;
+    font-weight: bold;
+    float: left;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background-color: white !important;
+}
+
+#header .langToggler md-fab-speed-dial .md-button:hover {
+    color: #343534;
+    background-color: white !important;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #header .langToggler md-fab-speed-dial .md-button {
+        font-size: 13px;
     }
 }
 

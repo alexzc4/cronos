@@ -316,6 +316,7 @@ body{
 					a{
 						background-color: $orange-color;
 						transform: translate3d(0px,19px,0px);
+						@include media(md){ transform: translate3d(0px,17px,0px); }
 					}
 					
 				}
@@ -415,7 +416,28 @@ body{
 		}
 	}
 	.langToggler{
-
+		md-fab-speed-dial{
+			margin-top: 30px;
+			@include media(md){     margin-top: 20px; }
+			.md-button{
+			    min-height: 10px;
+			    line-height: 30px;
+			    min-width: 40px;
+    			padding: 5px;
+			    margin: 0;
+			    color: #f8c65e;
+			    font-weight: bold;
+			    float:left;
+			    font-size: 15px;
+			    margin-bottom: 10px;
+			    background-color: white !important;
+			    &:hover{
+					color:$link-footer-color;
+					background-color: white !important;
+			    }
+			    @include media(md){ font-size: 13px; }
+			}
+		}
 	}
 	.headerLogo{
 		img{

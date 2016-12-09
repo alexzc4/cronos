@@ -623,7 +623,9 @@ section.footerLight{
     position: relative;
     width: 80%;
     margin-top: 30px;
-    @include media(md){ width: 85% }
+    @include media(xs){ width: 90%; width: 100%; padding: 0px; }
+    @include media(sm){ max-width: 590px; width: 100%; padding: 0px; }
+    @include media(md){ width: 85%; }
     &:before{
     	top: 0;
         bottom: 0;
@@ -633,10 +635,24 @@ section.footerLight{
         background-color: #dedede;
         left: 50%;
         margin-left: -0.5px;
+        @include media (sm){ left: 30px;}
+         @include media (xs){ left: 10px;}
     }
     > li{
     	margin-bottom: 20px;
         position: relative;
+        @include media(sm){ 
+        	margin-bottom: 30px; 
+        	&:last-child{
+        		margin-bottom: 0px;
+        	}
+        }
+        @include media(xs){ 
+        	margin-bottom: 30px;
+        	&:last-child{
+        		margin-bottom: 0px;
+        	}
+        }
         &:after{
 			content: " ";
             display: table;
@@ -651,6 +667,45 @@ section.footerLight{
             float: left;
             position: relative;
 			@include media(md){ width: 45% }
+			@include media(sm){
+				width: 76%;
+    			margin-right: 10px;
+				float: right;
+				
+		            &:before {
+		                border-left-width: 0 !important;
+		                border-right-width: 15px !important;
+		                left: -15px !important;
+		                right: auto !important;
+		            }
+		            &:after {
+		                border-left-width: 0 !important;
+		                border-right-width: 14px !important;
+		                left: -14px !important;
+		                right: auto !important;
+		            }
+
+			}
+
+			@include media(xs){
+				width: 85%;
+    			margin-right: 10px;
+				float: right;
+				
+		            &:before {
+		                border-left-width: 0 !important;
+		                border-right-width: 15px !important;
+		                left: -15px !important;
+		                right: auto !important;
+		            }
+		            &:after {
+		                border-left-width: 0 !important;
+		                border-right-width: 14px !important;
+		                left: -14px !important;
+		                right: auto !important;
+		            }
+
+			}
 			.groupLineImg{
 				background-repeat: no-repeat;
 			    background-position: center;
@@ -673,7 +728,20 @@ section.footerLight{
 			    		word-break: break-all;
 			    	    word-break: break-word;
 			    }
+
+
 			}
+
+			@media (max-width: 430px){
+			    	.groupLineImg{
+			    		display: none;
+			    	}
+			    	.groupLineText{
+			    		min-width: 100%;
+			    		width: 100%;
+			    		
+			    	}
+			    }
 
             &:before {
                 position: absolute;
@@ -700,6 +768,11 @@ section.footerLight{
                 content: " ";
             }
         }
+        @media (max-width: 430px){
+				.timeline-panel{
+					width: 79%;
+				}
+			}
         .timeline-badge {
             width: 50px;
             height: 50px;
@@ -711,6 +784,8 @@ section.footerLight{
             background-color: white;
             z-index: 100;
             border-radius: 50%;
+            @include media(xs){    left: 10px;}
+            @include media(sm){    left: 30px;}
             .timelineArrowWrapper{
             	border-radius: 50%;
 			    height: 25px;
@@ -734,8 +809,9 @@ section.footerLight{
                 left: -14px;
                 right: auto;
             }
+            
             @include media(xs){
-            	float: left;
+            	float: right;
             }
         }
     }
@@ -807,3 +883,49 @@ section.footerLight{
 ::-moz-placeholder          {color:$link-footer-color;}
 :-moz-placeholder           {color:$link-footer-color;}
 :-ms-input-placeholder      {color:$link-footer-color;}
+
+.groupContent{
+	margin-top: 0px;
+	@include media(sm){ margin-top: 30px; }
+	@include media(xs){ margin-top: 30px; }
+}
+
+.stickerGroup{
+	height: 500px;
+	z-index: 2;
+    position: relative;
+    .container{
+    	height: 500px;
+    	.stickerWrapper{
+			height: 200px;
+			position: relative;
+			background-color: $orange-color;
+			    padding: 50px;
+			&:before{
+			    width: 0;
+			    position: absolute;
+			    top: 100%;
+			    right: 30px;
+			    content: '';
+			    height: 0;
+			    border-style: solid;
+			    border-width: 23px 25px 0 25px;
+			    border-color: $orange-color transparent transparent transparent;
+			}
+			span{
+				color: white;
+			    line-height: 1.8;
+			    font-size: 23px;
+			    font-weight: bold;
+			    @include media(md){ font-size: 19px; font-weight: bold; }
+			}
+			@include media(md){ padding: 30px;}
+		}
+    }	
+    @include media(md){
+    	height: 350px;
+    		.container{
+    			height: 350px;
+    		}
+    }
+}
